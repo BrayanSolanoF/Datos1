@@ -29,7 +29,7 @@ public class Main   {
         frame.add(splitPane, BorderLayout.EAST);
 
         
-        //Agregar botones a la paleta
+        /*//Agregar botones a la paleta
         buttonspanel.add(andbutton);
         buttonspanel.add(orbutton);
         buttonspanel.add(notbutton);
@@ -41,7 +41,7 @@ public class Main   {
         buttonspanel.add(startButton);
         buttonspanel.add(endButton);
         buttonspanel.add(simulateButton);
-        buttonspanel.add(eraseButton);
+        buttonspanel.add(eraseButton);*/
 
 
 
