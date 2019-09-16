@@ -30,7 +30,7 @@ public class Main   {
 
         
         //Agregar botones a la paleta
-        buttonspanel.add(andbutton);
+        /*buttonspanel.add(andbutton);
         buttonspanel.add(orbutton);
         buttonspanel.add(notbutton);
         buttonspanel.add(nandbutton);
@@ -41,7 +41,7 @@ public class Main   {
         buttonspanel.add(startButton);
         buttonspanel.add(endButton);
         buttonspanel.add(simulateButton);
-        buttonspanel.add(eraseButton);
+        buttonspanel.add(eraseButton);*/
 
 
 
