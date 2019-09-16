@@ -1,6 +1,7 @@
 package Interfaz;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.Serializable;
 
 public class Main   {
@@ -16,15 +17,33 @@ public class Main   {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //.....
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        
+        //Hace visible la ventana
         frame.setVisible(true);
 
-        /*drawPanel.setLayout(null);
+        drawPanel.setLayout(null);
         frame.add(drawPanel);
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         JPanel buttonspanel = new JPanel();
+        //Split donde se encuentras los botones
+        splitPane.setTopComponent(buttonspanel);
+        frame.add(splitPane, BorderLayout.EAST);
 
-         */
+        
+        //Agregar botones a la paleta
+        buttonspanel.add(andbutton);
+        buttonspanel.add(orbutton);
+        buttonspanel.add(notbutton);
+        buttonspanel.add(nandbutton);
+        buttonspanel.add(norbutton);
+        buttonspanel.add(xnorbutton);
+        buttonspanel.add(xorbutton);
+        buttonspanel.add(newConnectionButton);
+        buttonspanel.add(startButton);
+        buttonspanel.add(endButton);
+        buttonspanel.add(simulateButton);
+        buttonspanel.add(eraseButton);
+
+
 
 
 
