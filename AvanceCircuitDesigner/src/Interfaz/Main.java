@@ -28,7 +28,7 @@ public class Main   {
         splitPane.setTopComponent(buttonspanel);
         frame.add(splitPane, BorderLayout.EAST);
 
-        
+
         //Agregar botones a la paleta
         buttonspanel.add(andbutton);
         buttonspanel.add(orbutton);
@@ -42,6 +42,16 @@ public class Main   {
         buttonspanel.add(endButton);
         buttonspanel.add(simulateButton);
         buttonspanel.add(eraseButton);
+        buttonspanel.add(Hola);
+
+
+        JButton andbutton = new JButton();
+        JButton orbutton = new JButton();
+        JButton notbutton = new JButton();
+        JButton nandbutton = new JButton();
+        JButton norbutton = new JButton();
+        JButton xorbutton = new JButton();
+        JButton xnorbutton = new JButton();
 
 
 

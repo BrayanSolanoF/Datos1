@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Plantilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Plantilla.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568514458656</updated>
-      <workItem from="1568514461541" duration="5772000" />
+      <workItem from="1568514461541" duration="8533000" />
     </task>
     <servers />
   </component>
