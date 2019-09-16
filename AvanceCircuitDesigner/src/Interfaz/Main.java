@@ -42,7 +42,7 @@ public class Main   {
         buttonspanel.add(endButton);
         buttonspanel.add(simulateButton);
         buttonspanel.add(eraseButton);
-        buttonspanel.add(Hola);
+
 
 
         JButton andbutton = new JButton();
