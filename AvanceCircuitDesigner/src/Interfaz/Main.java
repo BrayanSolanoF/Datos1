@@ -5,6 +5,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.Serializable;
 
+/**
+ * Esta clase funciona como ventana principal de la aplicacion.
+ * En ella se:
+ * Define lo relacionado con interfaz de usuario
+ * Establece botones en la paleta como imagenes
+ *
+ * */
+
 public class Main   {
 
     //Titulo Ventana
@@ -138,9 +146,14 @@ public class Main   {
 
 
     }
+    /**
+     * Este metodo inicia la aplicacion.
+     * @param args - argumentos a ejecutar de la pantalla principal
+     *
+     * */
     public static void main(String[] args){
 
-        new Main();// Clase ejecutable
+        new Main();
     }
 }
 
