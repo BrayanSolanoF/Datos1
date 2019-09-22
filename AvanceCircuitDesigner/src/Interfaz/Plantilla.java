@@ -3,6 +3,8 @@ package Interfaz;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.Connection;
+
 /**
  * Esta clase funciona como un canvas para realizar acciones sobre ella
  *
@@ -41,6 +43,22 @@ public class Plantilla extends JPanel {
 
             }
         });
+    }
+    /**
+     * Este metodo permite llamar al drawPanel.repaint
+     *
+     *
+     * */
+    public void paintComponent(Graphics g){
+        //Pinta el drawPanel y asocia componentes
+        super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        System.out.println(Main.lines.size());
+        for (Connection line: Main.lines){
+            line.paintConnection(g2d);
+        }
+
     }
 
 }
