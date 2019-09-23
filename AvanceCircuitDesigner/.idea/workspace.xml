@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="Se implementa clase plantilla">
-      <change afterPath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaz/Salida.java" afterDir="false" />
+    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Plantilla.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" afterDir="false" />
@@ -32,6 +31,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Interfaz/images" />
+      <recent name="$PROJECT_DIR$/src/Interfaz" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -77,7 +82,7 @@
       <updated>1568514458656</updated>
       <workItem from="1568514461541" duration="9094000" />
       <workItem from="1568668785160" duration="1360000" />
-      <workItem from="1568789786036" duration="12086000" />
+      <workItem from="1568789786036" duration="13504000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -121,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569189968093</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se agregan mas clases al paquete interfaz">
+      <created>1569198215399</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569198215399</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +159,7 @@
     <MESSAGE value="Manipulacion de componentes" />
     <MESSAGE value="Se agrega patron de diseño factory" />
     <MESSAGE value="Se implementa clase plantilla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implementa clase plantilla" />
+    <MESSAGE value="Se agregan mas clases al paquete interfaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan mas clases al paquete interfaz" />
   </component>
 </project>

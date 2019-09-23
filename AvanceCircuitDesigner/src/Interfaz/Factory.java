@@ -1,4 +1,4 @@
-package Interfaz;
+/*package Interfaz;
 
 import Lógica.*;
 
@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
  *
  * */
 
-
+/*
 public class Factory {
 
     /**
@@ -18,7 +18,7 @@ public class Factory {
      *
      * */
 
-    public static Component ComponentFactory(TypeComponent type, MouseEvent e){
+    /*public static Component ComponentFactory(TypeComponent type, MouseEvent e){
         if (type == TypeComponent.AND) {
             return new And(Main.IDComponente, e.getX(), e.getY());
         }
@@ -42,3 +42,5 @@ public class Factory {
 
     }
 }
+
+*/

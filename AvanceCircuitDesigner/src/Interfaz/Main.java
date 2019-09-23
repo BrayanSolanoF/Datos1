@@ -17,7 +17,6 @@ public class Main   {
     /**
      *Los siguientes "fields" son usados para dar un # de ID a los objetos
      *
-     *
      * */
     static int IDComponente = 0;
     static int IDConector = 0;
@@ -29,7 +28,7 @@ public class Main   {
     //Titulo Ventana
     static JFrame frame = new JFrame("Circuit Designer");
     //Pantilla para compuertas
-    static Plantilla drawPanel = new Plantilla();
+    //static Plantilla drawPanel = new Plantilla();
     //Construtor
     Main(){
 
@@ -40,19 +39,19 @@ public class Main   {
         //Hace visible la ventana
         frame.setVisible(true);
 
-        drawPanel.setLayout(null);
-        frame.add(drawPanel);
+        //drawPanel.setLayout(null);
+        //frame.add(drawPanel);
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         JPanel buttonspanel = new JPanel();
         //Split donde se encuentras los botones
         splitPane.setTopComponent(buttonspanel);
-        frame.add(splitPane, BorderLayout.EAST);
+        frame.add(splitPane, BorderLayout.WEST);
 
         //Botones como Jbuttons patra implementarlos a JPanel
         JButton andbutton = new JButton();
         //Se busca funcion para utilizar los botones con imagenes de cada componente
         try {
-            Image img = ImageIO.read(getClass().getResource("./and.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/and.png"));
             andbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
@@ -60,35 +59,35 @@ public class Main   {
 
         JButton orbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./or.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/or.png"));
             orbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton notbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./not.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/not.png"));
             notbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton nandbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./nand.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/nand.png"));
             nandbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton norbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./nor.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/nor.png"));
             norbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton xorbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./xor.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/xor.png"));
             xorbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
@@ -96,42 +95,42 @@ public class Main   {
 
         JButton xnorbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./xnor.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/xnor.png"));
             xnorbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton newConnectionButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./Thread.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/Thread.png"));
             newConnectionButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton startButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./start.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/start.png"));
             startButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton endButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./end.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/end.png"));
             endButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton simulateButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./simulate.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/simulate.png"));
             simulateButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton eraseButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./erase.png"));
+            Image img = ImageIO.read(getClass().getResource("./images/erase.png"));
             eraseButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);

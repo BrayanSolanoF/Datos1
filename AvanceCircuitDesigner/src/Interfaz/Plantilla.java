@@ -1,4 +1,4 @@
-package Interfaz;
+/*package Interfaz;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.sql.Connection;
  * Esta clase funciona como un canvas para realizar acciones sobre ella
  *
  * */
-public class Plantilla extends JPanel {
+/*public class Plantilla extends JPanel {
 
     Plantilla(){
 
@@ -49,7 +49,7 @@ public class Plantilla extends JPanel {
      *
      *
      * */
-    public void paintComponent(Graphics g){
+    /*public void paintComponent(Graphics g){
         //Pinta el drawPanel y asocia componentes
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -62,3 +62,4 @@ public class Plantilla extends JPanel {
     }
 
 }
+*/
