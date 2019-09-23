@@ -17,28 +17,28 @@ public class Plantilla extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if (Main.mode.equals("addingAnd")) { //adds and gate at click point
+                if (Main.modo.equals("addingAnd")) { //adds and gate at click point
                     Component c = new Factory().ComponentFactory(TypeComponent.AND, e);
-                } else if (Main.mode.equals("addingOr")) {// adds or gate at click point
+                } else if (Main.modo.equals("addingOr")) {// adds or gate at click point
                     Component c = new Factory().ComponentFactory(TypeComponent.OR, e);
-                } else if (Main.mode.equals("addingNot")) {//adds not gate at click point
+                } else if (Main.modo.equals("addingNot")) {//adds not gate at click point
                     Component c= new Factory().ComponentFactory(TypeComponent.NOT,e);
-                } else if (Main.mode.equals("addingNand")) {//adds not gate at click point
+                } else if (Main.modo.equals("addingNand")) {//adds not gate at click point
                     Component c= new Factory().ComponentFactory(TypeComponent.NAND,e);
-                } else if (Main.mode.equals("addingNor")) {//adds not gate at click point
+                } else if (Main.modo.equals("addingNor")) {//adds not gate at click point
                     Component c= new Factory().ComponentFactory(TypeComponent.NOR,e);
-                } else if (Main.mode.equals("addingXor")) {//adds not gate at click point
+                } else if (Main.modo.equals("addingXor")) {//adds not gate at click point
                     Component c= new Factory().ComponentFactory(TypeComponent.XOR,e);;
-                } else if (Main.mode.equals("addingXnor")) {//adds not gate at click point
+                } else if (Main.modo.equals("addingXnor")) {//adds not gate at click point
                     Component c= new Factory().ComponentFactory(TypeComponent.XNOR,e);
 
-                } else if (Main.mode.equals("addingStart")) {//adds start gate at click point
-                    Component c = new StartPoint(Main.currentComponentID, e.getX(), e.getY());
+                } else if (Main.modo.equals("addingStart")) {//adds start gate at click point
+                    Component c = new PuntoInicio(Main.IDComponente, e.getX(), e.getY());
 
-                } else if (Main.mode.equals("addingEnd")) { //adds end gate at click point
-                    Component c = new EndPoint(Main.currentComponentID, e.getX(), e.getY());
+                } else if (Main.modo.equals("addingEnd")) { //adds end gate at click point
+                    Component c = new PuntoFinal(Main.IDComponente, e.getX(), e.getY());
                 }
-                Main.mode = "";
+                Main.modo = "";
                 Main.drawPanel.repaint();
 
             }

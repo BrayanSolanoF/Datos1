@@ -14,6 +14,17 @@ import java.io.Serializable;
  * */
 
 public class Main   {
+    /**
+     *Los siguientes "fields" son usados para dar un # de ID a los objetos
+     *
+     *
+     * */
+    static int IDComponente = 0;
+    static int IDConector = 0;
+    static int IDConexion = 0;
+    static String modo = ""; //Preguntar
+    static boolean mostrarEntradas = true, mostrarSalidas = true;
+    static Salida SalidaSelecionada= null;
 
     //Titulo Ventana
     static JFrame frame = new JFrame("Circuit Designer");
