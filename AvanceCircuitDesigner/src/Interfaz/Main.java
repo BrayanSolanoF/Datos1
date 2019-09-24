@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Esta clase funciona como ventana principal de la aplicacion.
@@ -18,6 +19,8 @@ public class Main   {
      *Los siguientes "fields" son usados para dar un # de ID a los objetos
      *
      * */
+    static ArrayList<Componente> componentes = new ArrayList<Componente>();
+    static ArrayList<Conexion> lineas= new ArrayList<Conexion>();
     static int IDComponente = 0;
     static int IDConector = 0;
     static int IDConexion = 0;
