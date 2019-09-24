@@ -41,11 +41,11 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
     public void addOutput(Output o) {
         outputs.add(o);
     }
-    public void addInput(Input i) {
+    public void addInput(Entrada i) {
         inputs.add(i);
     }
 
-    public void addtoToggles(Input i) {
+    public void addtoToggles(Entrada i) {
         toggles.add(i);
     }
 
