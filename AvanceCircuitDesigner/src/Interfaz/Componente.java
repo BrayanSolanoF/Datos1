@@ -57,7 +57,7 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
 
         Graphics2D g2d = (Graphics2D) g;
 
-        if (Main.showInputs) {
+        if (Main.mostrarEntradas) {
             for (Entrada in : inputs) {
                 in.paintConnector(g2d);
             }
@@ -65,10 +65,10 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
 
         else {
             for (Entrada tog : toggles) {
-                tog.paintConnector(g2d);
+                tog.paintConector(g2d);
             }
         }
-        if (Main.showOutputs) {
+        if (Main.mostrarSalidas) {
             for (Salida out : outputs) {
                 if (out.isAvailable()) {
                     out.paintConnector(g2d);
@@ -102,27 +102,27 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
 
             for (Entrada input : this.inputs) {
 
-                for (Conexion connection : input.connections) {
+                for (Conexion connection : input.conexiones) {
 
                     Main.drawPanel.remove(connection);
                     Main.lineas.remove(connection);
 
-                    connection.salida.connections.remove(connection);
+                    connection.salida.conexiones.remove(connection);
 
 
 
 
                 }
-                input.connections.remove(input.connections);
+                input.conexiones.remove(input.conexiones);
             }
             for (Salida output : this.outputs) {
-                for (Conexion connection : output.connections) {
+                for (Conexion connection : output.conexiones) {
                     Main.drawPanel.remove(connection);
                     Main.lineas.remove(connection);
 
-                    connection.entrada.connections.remove(connection);
+                    connection.entrada.conexiones.remove(connection);
                 }
-                output.connections.remove(output.connections);
+                output.conexiones.remove(output.conexiones);
             }
 
             Main.drawPanel.repaint();
@@ -143,9 +143,9 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
     @Override
     public void mouseClicked(MouseEvent e) {
         for (Entrada in : inputs) {
-            if (in.component.type.equals("Start") && in.contains(e.getPoint())){
+            if (in.componente.type.equals("Start") && in.contains(e.getPoint())){
                 System.out.println("testtoggle");
-                in.component.toggle();
+                in.componente.toggle();
 
             }
         }
@@ -154,11 +154,11 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
             for (Entrada in : inputs) {
                 if (in.isAvailable() && in.contains(e.getPoint())) {
 
-                    Main.lineas.add(new Conexion(Main.IDConexion, Main.selectedOutput, in));
+                    Main.lineas.add(new Conexion(Main.IDConexion, Main.SalidaSelecionada, in));
 
                     Main.drawPanel.repaint();
                     Main.modo = "";
-                    Main.showOutputs = true;
+                    Main.mostrarSalidas = true;
 
                 }
             }
@@ -167,10 +167,10 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
             for (Salida out : outputs) {
                 if (out.isAvailable() && out.contains(e.getPoint())) {
 
-                    Main.selectedOutput = out;
-                    Main.showOutputs = false;
+                    Main.SalidaSelecionada = out;
+                    Main.mostrarSalidas = false;
                     Main.modo = "choosingInput";
-                    Main.showInputs = true;
+                    Main.mostrarEntradas = true;
 
                     Main.drawPanel.repaint();
 

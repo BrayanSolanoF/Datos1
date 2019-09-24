@@ -1,4 +1,6 @@
-/*package Interfaz;
+
+
+package Interfaz;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,25 +20,25 @@ public class Plantilla extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if (Main.modo.equals("addingAnd")) { //adds and gate at click point
-                    Component c = new Factory().ComponentFactory(TypeComponent.AND, e);
+                    Componente c = new Factory().ComponentFactory(TypeComponent.AND, e);
                 } else if (Main.modo.equals("addingOr")) {// adds or gate at click point
-                    Component c = new Factory().ComponentFactory(TypeComponent.OR, e);
+                    Componente c = new Factory().ComponentFactory(TypeComponent.OR, e);
                 } else if (Main.modo.equals("addingNot")) {//adds not gate at click point
-                    Component c= new Factory().ComponentFactory(TypeComponent.NOT,e);
+                    Componente c= new Factory().ComponentFactory(TypeComponent.NOT,e);
                 } else if (Main.modo.equals("addingNand")) {//adds not gate at click point
-                    Component c= new Factory().ComponentFactory(TypeComponent.NAND,e);
+                    Componente c= new Factory().ComponentFactory(TypeComponent.NAND,e);
                 } else if (Main.modo.equals("addingNor")) {//adds not gate at click point
-                    Component c= new Factory().ComponentFactory(TypeComponent.NOR,e);
+                    Componente c= new Factory().ComponentFactory(TypeComponent.NOR,e);
                 } else if (Main.modo.equals("addingXor")) {//adds not gate at click point
-                    Component c= new Factory().ComponentFactory(TypeComponent.XOR,e);;
+                    Componente c= new Factory().ComponentFactory(TypeComponent.XOR,e);;
                 } else if (Main.modo.equals("addingXnor")) {//adds not gate at click point
-                    Component c= new Factory().ComponentFactory(TypeComponent.XNOR,e);
+                    Componente c= new Factory().ComponentFactory(TypeComponent.XNOR,e);
 
                 } else if (Main.modo.equals("addingStart")) {//adds start gate at click point
-                    Component c = new PuntoInicio(Main.IDComponente, e.getX(), e.getY());
+                    Componente c = new PuntoInicio(Main.IDComponente, e.getX(), e.getY());
 
                 } else if (Main.modo.equals("addingEnd")) { //adds end gate at click point
-                    Component c = new PuntoFinal(Main.IDComponente, e.getX(), e.getY());
+                    Componente c = new PuntoFinal(Main.IDComponente, e.getX(), e.getY());
                 }
                 Main.modo = "";
                 Main.drawPanel.repaint();
@@ -54,8 +56,8 @@ public class Plantilla extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        System.out.println(Main.lines.size());
-        for (Connection line: Main.lines){
+        System.out.println(Main.lineas.size());
+        for (Conexion line: Main.lineas){
             line.paintConnection(g2d);
         }
 
