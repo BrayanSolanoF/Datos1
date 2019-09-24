@@ -27,7 +27,7 @@ public class And extends Componente {
         //JLabel jLabelObject = new JLabel();
         //jLabelObject.setIcon(new ImageIcon("./images/ad"));
         setBorder(new LineBorder(Color.black, 1));
-        new Entrada(Main.IDConector, this, 0, 6);
+        new Entrada(Main.IDconector, this, 0, 6);
         new Entrada(Main.IDConector, this, 0, getHeight() - 6);
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
 

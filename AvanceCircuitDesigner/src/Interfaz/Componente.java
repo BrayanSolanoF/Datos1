@@ -23,22 +23,22 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
         return (new ArrayList<Boolean>());
     }
     int value = 0;
-    ArrayList<Input> inputs = new ArrayList<Input>();
-    ArrayList<Input> toggles = new ArrayList<Input>();
-    ArrayList<Output> outputs = new ArrayList<Output>();
+    ArrayList<Entrada> inputs = new ArrayList<Entrada>();
+    ArrayList<Entrada> toggles = new ArrayList<Entrada>();
+    ArrayList<Salida> outputs = new ArrayList<Salida>();
     public Componente(int ID, String text, int x, int y) {
 
         super(text);
         id = ID;
         Main.IDComponente++;
 
-        Main.components.add(this);
+        Main.componentes.add(this);
         addMouseListener(this);
         addMouseMotionListener(this);
         Main.drawPanel.add(this);
     }
 
-    public void addOutput(Output o) {
+    public void addOutput(Salida o) {
         outputs.add(o);
     }
     public void addInput(Entrada i) {
@@ -58,18 +58,18 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
         Graphics2D g2d = (Graphics2D) g;
 
         if (Main.showInputs) {
-            for (Input in : inputs) {
+            for (Entrada in : inputs) {
                 in.paintConnector(g2d);
             }
         }
 
         else {
-            for (Input tog : toggles) {
+            for (Entrada tog : toggles) {
                 tog.paintConnector(g2d);
             }
         }
         if (Main.showOutputs) {
-            for (Output out : outputs) {
+            for (Salida out : outputs) {
                 if (out.isAvailable()) {
                     out.paintConnector(g2d);
                 }
@@ -93,21 +93,21 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
     @Override
     public void mousePressed(MouseEvent e) {
 
-        System.out.println(Main.mode);
-        if (Main.mode.equals("erase")) {
+        System.out.println(Main.modo);
+        if (Main.modo.equals("erase")) {
 
 
             Main.drawPanel.remove(this);
-            Main.components.remove(this);
+            Main.componentes.remove(this);
 
-            for (Input input : this.inputs) {
+            for (Entrada input : this.inputs) {
 
-                for (Connection connection : input.connections) {
+                for (Conexion connection : input.connections) {
 
                     Main.drawPanel.remove(connection);
-                    Main.lines.remove(connection);
+                    Main.lineas.remove(connection);
 
-                    connection.output.connections.remove(connection);
+                    connection.salida.connections.remove(connection);
 
 
 
@@ -115,18 +115,18 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
                 }
                 input.connections.remove(input.connections);
             }
-            for (Output output : this.outputs) {
-                for (Connection connection : output.connections) {
+            for (Salida output : this.outputs) {
+                for (Conexion connection : output.connections) {
                     Main.drawPanel.remove(connection);
-                    Main.lines.remove(connection);
+                    Main.lineas.remove(connection);
 
-                    connection.input.connections.remove(connection);
+                    connection.entrada.connections.remove(connection);
                 }
                 output.connections.remove(output.connections);
             }
 
             Main.drawPanel.repaint();
-            Main.mode = "";
+            Main.modo = "";
 
         }
         startDragX = e.getX();
@@ -142,34 +142,34 @@ abstract class Componente extends JLabel implements MouseListener, MouseMotionLi
     }
     @Override
     public void mouseClicked(MouseEvent e) {
-        for (Input in : inputs) {
+        for (Entrada in : inputs) {
             if (in.component.type.equals("Start") && in.contains(e.getPoint())){
                 System.out.println("testtoggle");
                 in.component.toggle();
 
             }
         }
-        if (Main.mode.equals("choosingInput")) {
+        if (Main.modo.equals("choosingInput")) {
 
-            for (Input in : inputs) {
+            for (Entrada in : inputs) {
                 if (in.isAvailable() && in.contains(e.getPoint())) {
 
-                    Main.lines.add(new Connection(Main.currentConnectionID, Main.selectedOutput, in));
+                    Main.lineas.add(new Conexion(Main.IDConexion, Main.selectedOutput, in));
 
                     Main.drawPanel.repaint();
-                    Main.mode = "";
+                    Main.modo = "";
                     Main.showOutputs = true;
 
                 }
             }
         }
-        if (Main.mode.equals("choosingOutput")) {
-            for (Output out : outputs) {
+        if (Main.modo.equals("choosingOutput")) {
+            for (Salida out : outputs) {
                 if (out.isAvailable() && out.contains(e.getPoint())) {
 
                     Main.selectedOutput = out;
                     Main.showOutputs = false;
-                    Main.mode = "choosingInput";
+                    Main.modo = "choosingInput";
                     Main.showInputs = true;
 
                     Main.drawPanel.repaint();

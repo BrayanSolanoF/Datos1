@@ -10,7 +10,7 @@ public class Entrada extends Conector {
         if (owner.type.equals("Start")) {
             owner.addtoToggles(this);
         }
-        maxConnections = 1;
+        ConexionesMaximas = 1;
 
 
         Polygon p = new Polygon();

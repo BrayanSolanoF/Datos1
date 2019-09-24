@@ -31,7 +31,7 @@ public class Main   {
     //Titulo Ventana
     static JFrame frame = new JFrame("Circuit Designer");
     //Pantilla para compuertas
-    //static Plantilla drawPanel = new Plantilla();
+    static Plantilla drawPanel = new Plantilla();
     //Construtor
     Main(){
 
