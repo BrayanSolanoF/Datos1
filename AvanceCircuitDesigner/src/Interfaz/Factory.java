@@ -11,8 +11,8 @@ import java.awt.event.MouseEvent;
  public class Factory {
 
  public static Componente ComponentFactory(TypeComponent type, MouseEvent e) {
- if (type == TypeComponent.AND) {
- return new And(Main.IDComponente, e.getX(), e.getY());
+    if (type == TypeComponent.AND) {
+        return new And(Main.IDComponente, e.getX(), e.getY());
  }
  if (type == TypeComponent.OR) {
  return new Or(Main.IDComponente, e.getX(), e.getY());

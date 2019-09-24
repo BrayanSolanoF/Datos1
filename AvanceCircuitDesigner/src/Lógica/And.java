@@ -27,15 +27,15 @@ public class And extends Componente {
         //JLabel jLabelObject = new JLabel();
         //jLabelObject.setIcon(new ImageIcon("./images/ad"));
         setBorder(new LineBorder(Color.black, 1));
-        new Entrada(Main.IDconector, this, 0, 6);
+        new Entrada(Main.IDConector, this, 0, 6);
         new Entrada(Main.IDConector, this, 0, getHeight() - 6);
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
 
     }
     public boolean operation(ArrayList<Boolean> args) {
-        boolean input1 = args.get(0);
-        boolean input2 = args.get(1);
-        return (input1&&input2);
+        boolean entrada1 = args.get(0);
+        boolean entrada2 = args.get(1);
+        return (entrada1&&entrada2);
     }
 
 

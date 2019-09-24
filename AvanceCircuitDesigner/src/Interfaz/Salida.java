@@ -8,7 +8,7 @@ public class Salida extends Conector{
 
     ArrayList<Entrada> inputsReceivingThis = new ArrayList<Entrada>();
 
-    Salida(int ID, Componente owner, int x, int y) {
+    public Salida(int ID, Componente owner, int x, int y) {
         super(ID, owner, x, y);
         isOutput = true;
         owner.addOutput(this);

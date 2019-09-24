@@ -15,15 +15,16 @@ import java.util.ArrayList;
  * */
 
 public class Main   {
+
     /**
      *Los siguientes "fields" son usados para dar un # de ID a los objetos
      *
      * */
     static ArrayList<Componente> componentes = new ArrayList<Componente>();
     static ArrayList<Conexion> lineas= new ArrayList<Conexion>();
-    static int IDComponente = 0;
-    static int IDConector = 0;
-    static int IDConexion = 0;
+    public static int IDComponente = 0;
+    public static int IDConector = 0;
+    public static int IDConexion = 0;
     static String modo = ""; //Preguntar
     static boolean mostrarEntradas = true, mostrarSalidas = true;
     static Salida SalidaSelecionada= null;

@@ -7,11 +7,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 
-abstract class Componente extends JLabel implements MouseListener, MouseMotionListener {
+public class Componente extends JLabel implements MouseListener, MouseMotionListener {
 
     int numberConnected = 0;
     int id;
-    String type;
+    public String type;
 
     public void toggle() {
 

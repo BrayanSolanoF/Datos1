@@ -18,8 +18,8 @@ public class Conexion extends JComponent {
 
         this.salida = LaSalida;
         this.entrada = LaEntrada;
-        if (entrada.isAvailable()) salida.connections.add(this);
-        if (entrada.isAvailable()) salida.connections.add(this);
+        if (entrada.isAvailable()) salida.conexiones.add(this);
+        if (entrada.isAvailable()) salida.conexiones.add(this);
     }
     public void paintConnection(Graphics2D g2d) {
 
@@ -27,7 +27,7 @@ public class Conexion extends JComponent {
         g2d.draw(line);
         salida.inputsReceivingThis.add(entrada);
         if (Main.modo.equals("choosingInput")) {
-            entrada.component.numberConnected +=1;
+            entrada.componente.numberConnected +=1;
 
         }
     }

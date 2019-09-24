@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="Se edita clase Factory">
+    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Componente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Componente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Conector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Conector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Salida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Salida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/And.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Nand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Nor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +87,7 @@
       <updated>1568514458656</updated>
       <workItem from="1568514461541" duration="9094000" />
       <workItem from="1568668785160" duration="1360000" />
-      <workItem from="1568789786036" duration="22953000" />
+      <workItem from="1568789786036" duration="25552000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -158,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569361216125</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Se corrigen errores en clase componente">
+      <created>1569362217364</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569362217364</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +203,7 @@
     <MESSAGE value="Se agregan imagenes al panel de botones" />
     <MESSAGE value="Se agregan clases para componentes  y conexiones" />
     <MESSAGE value="Se agrega clase Entrada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrega clase Entrada" />
+    <MESSAGE value="Se corrigen errores en clase componente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se corrigen errores en clase componente" />
   </component>
 </project>

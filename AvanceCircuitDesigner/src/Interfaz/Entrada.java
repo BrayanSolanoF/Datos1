@@ -3,7 +3,7 @@ import java.awt.Color;
 import java.awt.Polygon;
 
 public class Entrada extends Conector {
-    Entrada(int ID, Componente owner, int x, int y) {
+    public Entrada(int ID, Componente owner, int x, int y) {
         super(ID,owner, x, y);
         isInput = true;
         owner.addInput(this);
