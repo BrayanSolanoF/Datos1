@@ -12,8 +12,8 @@ public class Salida extends Conector{
         super(ID, owner, x, y);
         isOutput = true;
         owner.addOutput(this);
-        ConexionesMaximas = 100; // outputs can go to lots of places, but if you're over 100, I mean, come on...
-        //defines look of outputs:
+        ConexionesMaximas = 100;
+
         Polygon p = new Polygon();
         p.addPoint(x - w, y - h / 2);
         p.addPoint(x, y - h/2);

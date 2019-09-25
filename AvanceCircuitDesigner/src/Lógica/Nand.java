@@ -15,7 +15,7 @@ import javax.swing.border.LineBorder;
  *
  * */
 public class Nand extends Componente {
-    Nand(int ID, int x, int y) {
+    public Nand(int ID, int x, int y) {
         super(ID, "NAND", x, y);
         type = "Nand";
 

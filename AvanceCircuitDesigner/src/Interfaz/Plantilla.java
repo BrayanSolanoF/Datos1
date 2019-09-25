@@ -5,7 +5,7 @@ package Interfaz;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.Connection;
+
 
 /**
  * Esta clase funciona como un canvas para realizar acciones sobre ella

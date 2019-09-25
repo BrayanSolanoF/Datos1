@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 public class Or extends Componente {
-    Or(int ID, int x, int y) {
+    public Or(int ID, int x, int y) {
         super(ID, "OR",  x, y);
         type = "Or";
 
@@ -21,10 +21,10 @@ public class Or extends Componente {
         new Entrada(Main.IDConector, this, 0, getHeight() - 6);
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
     }
-    public boolean operation(ArrayList<Boolean> args) { // "ors" the two inputs
+    public boolean operation(ArrayList<Boolean> args) {
         boolean entrada1 = args.get(0);
-        boolean entrada2 = args.get(1);//need to relate these with the physical inputs
-        boolean output = (entrada1||entrada2);//need to relate this with the Output
+        boolean entrada2 = args.get(1);
+        boolean output = (entrada1||entrada2);
         return output;
     }
 

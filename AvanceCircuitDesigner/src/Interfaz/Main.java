@@ -49,7 +49,7 @@ public class Main   {
         JPanel buttonspanel = new JPanel();
         //Split donde se encuentras los botones
         splitPane.setTopComponent(buttonspanel);
-        frame.add(splitPane, BorderLayout.WEST);
+        frame.add(splitPane, BorderLayout.PAGE_START);
 
         //Botones como Jbuttons patra implementarlos a JPanel
         JButton andbutton = new JButton();

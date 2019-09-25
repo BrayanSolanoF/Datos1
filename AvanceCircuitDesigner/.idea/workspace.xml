@@ -3,11 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/And.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/And.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Not.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Not.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Or.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Or.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xnor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xnor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Componente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Componente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Salida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Salida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/And.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lógica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Nand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lógica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Nor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lógica/Not.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Not.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lógica/Or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Or.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lógica/Xnor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Xnor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Xor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lógica/Xor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +99,7 @@
       <updated>1568514458656</updated>
       <workItem from="1568514461541" duration="9094000" />
       <workItem from="1568668785160" duration="1360000" />
-      <workItem from="1568789786036" duration="26222000" />
+      <workItem from="1568789786036" duration="28088000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -175,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569367224437</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Se mas agregan compuertas">
+      <created>1569367888279</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569367888280</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +231,7 @@
     <MESSAGE value="Se agrega clase Entrada" />
     <MESSAGE value="Se corrigen errores en clase componente" />
     <MESSAGE value="Se agregan compuertas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregan compuertas" />
+    <MESSAGE value="Se mas agregan compuertas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se mas agregan compuertas" />
   </component>
 </project>

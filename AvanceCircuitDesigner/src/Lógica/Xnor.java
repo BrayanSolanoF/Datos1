@@ -9,7 +9,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
 public class Xnor extends Componente {
-    Xnor(int ID, int x, int y) {
+    public Xnor(int ID, int x, int y) {
         super(ID, "XNOR", x, y);
         type = "Xnor";
 

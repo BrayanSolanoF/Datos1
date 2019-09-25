@@ -1,6 +1,5 @@
 package Interfaz;
-import java.awt.Color;
-import java.awt.Polygon;
+import java.awt.*;
 
 public class Entrada extends Conector {
     public Entrada(int ID, Componente owner, int x, int y) {
@@ -20,5 +19,8 @@ public class Entrada extends Conector {
         p.addPoint(x, y + h/2);
         shape = p;
         color = Color.blue;
+    }
+
+    public void paintConector(Graphics2D g2d) {
     }
 }

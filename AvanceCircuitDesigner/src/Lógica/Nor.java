@@ -14,7 +14,7 @@ import javax.swing.border.LineBorder;
  *
  * */
 public class Nor extends Componente {
-    Nor(int ID, int x, int y) {
+    public Nor(int ID, int x, int y) {
         super(ID, "NOR",  x, y);
         type = "Nor";
 

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 
 public class And extends Componente {
-    And(int ID, int x, int y){
+    public And(int ID, int x, int y){
         super(ID, "AND",  x, y);
         type = "And";
         setVerticalAlignment(SwingConstants.CENTER);

@@ -15,7 +15,7 @@ import javax.swing.border.LineBorder;
  *
  * */
 public class Not extends Componente {
-    Not(int ID, int x, int y) {
+    public Not(int ID, int x, int y) {
         super(ID, "NOT",  x, y);
         type = "Not";
 

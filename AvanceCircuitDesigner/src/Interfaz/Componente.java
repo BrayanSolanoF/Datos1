@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+import javax.swing.JLabel;
 
 public class Componente extends JLabel implements MouseListener, MouseMotionListener {
 
@@ -23,9 +24,9 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
         return (new ArrayList<Boolean>());
     }
     int value = 0;
-    ArrayList<Entrada> inputs = new ArrayList<Entrada>();
+    ArrayList<Entrada> entradas = new ArrayList<Entrada>();
     ArrayList<Entrada> toggles = new ArrayList<Entrada>();
-    ArrayList<Salida> outputs = new ArrayList<Salida>();
+    ArrayList<Salida> salidas = new ArrayList<Salida>();
     public Componente(int ID, String text, int x, int y) {
 
         super(text);
@@ -39,10 +40,10 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
     }
 
     public void addOutput(Salida o) {
-        outputs.add(o);
+        salidas.add(o);
     }
     public void addInput(Entrada i) {
-        inputs.add(i);
+        entradas.add(i);
     }
 
     public void addtoToggles(Entrada i) {
@@ -58,7 +59,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
         Graphics2D g2d = (Graphics2D) g;
 
         if (Main.mostrarEntradas) {
-            for (Entrada in : inputs) {
+            for (Entrada in : entradas) {
                 in.paintConnector(g2d);
             }
         }
@@ -69,7 +70,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
             }
         }
         if (Main.mostrarSalidas) {
-            for (Salida out : outputs) {
+            for (Salida out : salidas) {
                 if (out.isAvailable()) {
                     out.paintConnector(g2d);
                 }
@@ -100,7 +101,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
             Main.drawPanel.remove(this);
             Main.componentes.remove(this);
 
-            for (Entrada input : this.inputs) {
+            for (Entrada input : this.entradas) {
 
                 for (Conexion connection : input.conexiones) {
 
@@ -115,7 +116,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
                 }
                 input.conexiones.remove(input.conexiones);
             }
-            for (Salida output : this.outputs) {
+            for (Salida output : this.salidas) {
                 for (Conexion connection : output.conexiones) {
                     Main.drawPanel.remove(connection);
                     Main.lineas.remove(connection);
@@ -142,7 +143,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
     }
     @Override
     public void mouseClicked(MouseEvent e) {
-        for (Entrada in : inputs) {
+        for (Entrada in : entradas) {
             if (in.componente.type.equals("Start") && in.contains(e.getPoint())){
                 System.out.println("testtoggle");
                 in.componente.toggle();
@@ -151,7 +152,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
         }
         if (Main.modo.equals("choosingInput")) {
 
-            for (Entrada in : inputs) {
+            for (Entrada in : entradas) {
                 if (in.isAvailable() && in.contains(e.getPoint())) {
 
                     Main.lineas.add(new Conexion(Main.IDConexion, Main.SalidaSelecionada, in));
@@ -164,7 +165,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
             }
         }
         if (Main.modo.equals("choosingOutput")) {
-            for (Salida out : outputs) {
+            for (Salida out : salidas) {
                 if (out.isAvailable() && out.contains(e.getPoint())) {
 
                     Main.SalidaSelecionada = out;
