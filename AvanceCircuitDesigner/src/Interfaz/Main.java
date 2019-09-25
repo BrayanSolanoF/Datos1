@@ -3,6 +3,8 @@ package Interfaz;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -43,8 +45,8 @@ public class Main   {
         //Hace visible la ventana
         frame.setVisible(true);
 
-        //drawPanel.setLayout(null);
-        //frame.add(drawPanel);
+        drawPanel.setLayout(null);
+        frame.add(drawPanel);
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         JPanel buttonspanel = new JPanel();
         //Split donde se encuentras los botones
@@ -156,10 +158,252 @@ public class Main   {
         buttonspanel.add(eraseButton);
 
 
+        
+        andbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                makeAnd();
+            }
+        });
+
+
+
+        orbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                makeOr();
+            }
+        });
+
+        notbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                makeNot();
+            }
+        });
+
+        nandbutton.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                makeNand();
+            }
+        });
+
+        norbutton.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                makeNor();
+            }
+        });
+
+        xorbutton.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                makeXor();
+            }
+        });
+
+        xnorbutton.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                makeXnor();
+            }
+        });
+
+        newConnectionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                makeConnection();
+            }
+        });
+
+
+        startButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                makeStart();
+            }
+        });
+
+        endButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                makeEnd();
+            }
+        });
+        simulateButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                simulate();
+            }
+        });
+
+        eraseButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+
+                makeErase();
+            }
+        });
+
+
+        frame.setVisible(true);
+    }
+
+    //self-explanatory functions below
+    void makeAnd() {
+
+        modo = "addingAnd";
+    }
+
+    void makeOr() {
+
+        modo = "addingOr";
+    }
+
+    void makeNot() {
+
+        modo = "addingNot";
+    }
+
+    void makeNand(){
+
+        modo = "addingNand";
+    }
+
+    void makeNor(){
+        modo = "addingNor";
+    }
+
+    void makeXor(){
+
+        modo = "addingXor";
+    }
+
+    void makeXnor(){
+        modo = "addingXnor";
+    }
+
+    void makeConnection() {
+
+        modo = "choosingOutput";
+        mostrarEntradas = false;
+        mostrarSalidas= true;
+        drawPanel.repaint(); //repainting is basically refreshing the GUI
+    }
+
+    void makeStart() {
+
+        modo = "addingStart";
+    }
+
+    void makeEnd() {
+
+        modo = "addingEnd";
+    }
+
+    void makeErase() {
+
+        modo = "erase";
+
+    }
+
+    int simulate() {
+        int toBeReturned = -1;
+
+        int keepGoing = 0;
+
+        while (keepGoing < 200) { 
+            keepGoing++;
+            int endsReached = 0;
+
+            for (Componente gate : componentes) {
+                boolean act = true;
+                ArrayList<Boolean> inputValues = new ArrayList<Boolean>(); 
+                for (Entrada entrada : gate.entradas) {
+                    if (!(entrada.hasValue)) {
+                        act = false; 
+                    }
+                    else {
+                        inputValues.add(entrada.value);
+                    }
+                }
+                if (act) {  
+                    if (gate.type.equals("User")) { 
+                        
+                        int nextOne=0;
+                        for (Salida out : gate.salidas) {
+                            System.out.println("nextone is " + nextOne + "input value: " + inputValues + " value is " + (gate.userOperation(inputValues)));
+                            out.value = gate.userOperation(inputValues).get(nextOne);
+                            nextOne ++;
+                        }
+                    }
+                    else { 
+                        for (Salida out : gate.salidas){
+                            out.value = gate.operation(inputValues);
+                        }
+                    }
+                    for (Salida out : gate.salidas) { 
+                        for (Entrada input : out.inputsReceivingThis) {
+
+
+                            input.value = out.value;
+                            input.hasValue = true;
+                        }
+                    }
+                    if (gate.type.equals("End")) {
+                        boolean reached = false;
+                        String result;
+                        if (gate.entradas.get(0).value == false) {
+                            result = Integer.toString(0);
+                            reached = true;
+                        }
+                        else if (gate.entradas.get(0).value == true) {
+                            result = Integer.toString(1);
+                            reached = true;
+                        }
+                        else { 
+                            result = "";
+                        }
+
+                        if (reached) { 
+                            gate.setText(result);
+                            endsReached +=1;
+                        }
+
+                        ArrayList<Componente> endPoints = new ArrayList<Componente>();
+                        for (Component componente : componentes) {
+                            if (componente.equals("End")) {
+                                endPoints.add((Componente) componente);
+                            }
+                        }
+                        if (endsReached >= endPoints.size()) { 
+                            toBeReturned = 0; 
+
+                        }
+
+                    }
+                }
+                else {
+
+                }
+
+
+            }
+
+        }
+        return toBeReturned;
+
 
 
 
     }
+
+
+
+
+
+    
     /**
      * Este metodo inicia la aplicacion.
      * @param args - argumentos a ejecutar de la pantalla principal
