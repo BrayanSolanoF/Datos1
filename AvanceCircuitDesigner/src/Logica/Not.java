@@ -1,11 +1,10 @@
-package Lógica;
+package Logica;
 import Interfaz.Componente;
 import Interfaz.Entrada;
 import Interfaz.Main;
 import Interfaz.Salida;
 
 import java.awt.Color;
-import java.util.ArrayList;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;

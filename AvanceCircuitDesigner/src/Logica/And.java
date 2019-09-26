@@ -1,4 +1,4 @@
-package Lógica;
+package Logica;
 
 import Interfaz.Entrada;
 import Interfaz.Main;

@@ -1,6 +1,6 @@
 package Interfaz;
 
-import Lógica.*;
+import Logica.*;
 import java.awt.event.MouseEvent;
 
 /**

@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Interfaz/Lista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaz/Nodo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/And.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Not.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Or.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xnor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/And.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Not.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Not.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Or.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Xnor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xnor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lógica/Xor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Prueba">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Interfaz.Main" />
       <module name="AvanceCircuitDesigner" />
@@ -61,8 +76,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Prueba" />
+      <module name="AvanceCircuitDesigner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Prueba" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -80,7 +103,9 @@
       <workItem from="1568514461541" duration="9094000" />
       <workItem from="1568668785160" duration="1360000" />
       <workItem from="1568789786036" duration="29175000" />
-      <workItem from="1569399892021" duration="1883000" />
+      <workItem from="1569399892021" duration="8025000" />
+      <workItem from="1569457323743" duration="15000" />
+      <workItem from="1569470498052" duration="773000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -187,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569369776430</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Se logra alcanzar una base donde el codigo compila">
+      <created>1569406751571</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569406751572</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +253,7 @@
     <MESSAGE value="Se agregan compuertas" />
     <MESSAGE value="Se mas agregan compuertas" />
     <MESSAGE value="Se corrigen detalles en diferentes clases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se corrigen detalles en diferentes clases" />
+    <MESSAGE value="Se logra alcanzar una base donde el codigo compila" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se logra alcanzar una base donde el codigo compila" />
   </component>
 </project>

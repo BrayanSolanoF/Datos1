@@ -1,17 +1,16 @@
-package Lógica;
+package Logica;
 import Interfaz.*;
-import Interfaz.Componente;
+
 
 import java.awt.Color;
 import java.util.ArrayList;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-
-public class Xor extends Componente {
-    public Xor(int ID, int x, int y) {
-        super(ID, "XOR",  x, y);
-        type = "Xor";
+public class Or extends Componente {
+    public Or(int ID, int x, int y) {
+        super(ID, "OR",  x, y);
+        type = "Or";
 
         setVerticalAlignment(SwingConstants.CENTER);
         setHorizontalAlignment(SwingConstants.CENTER);
@@ -25,12 +24,8 @@ public class Xor extends Componente {
     public boolean operation(ArrayList<Boolean> args) {
         boolean entrada1 = args.get(0);
         boolean entrada2 = args.get(1);
-        boolean salida;
-        if (entrada1 == entrada2){
-            salida = true;
-        }else {
-            salida = false;
-        }
-        return salida;
+        boolean output = (entrada1||entrada2);
+        return output;
     }
+
 }

@@ -1,16 +1,22 @@
-package Lógica;
-import Interfaz.*;
-
+package Logica;
+import Interfaz.Componente;
+import Interfaz.Entrada;
+import Interfaz.Main;
+import Interfaz.Salida;
 
 import java.awt.Color;
 import java.util.ArrayList;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-public class Or extends Componente {
-    public Or(int ID, int x, int y) {
-        super(ID, "OR",  x, y);
-        type = "Or";
+/**
+ * Esta clase representa el componente Nor
+ *
+ * */
+public class Nor extends Componente {
+    public Nor(int ID, int x, int y) {
+        super(ID, "NOR",  x, y);
+        type = "Nor";
 
         setVerticalAlignment(SwingConstants.CENTER);
         setHorizontalAlignment(SwingConstants.CENTER);
@@ -24,8 +30,6 @@ public class Or extends Componente {
     public boolean operation(ArrayList<Boolean> args) {
         boolean entrada1 = args.get(0);
         boolean entrada2 = args.get(1);
-        boolean output = (entrada1||entrada2);
-        return output;
+        return !(entrada1||entrada2);
     }
-
 }
