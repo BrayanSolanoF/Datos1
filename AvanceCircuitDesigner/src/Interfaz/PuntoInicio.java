@@ -2,7 +2,7 @@ package Interfaz;
 
 
 import java.awt.Color;
-import java.util.ArrayList;
+
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -35,7 +35,7 @@ public class PuntoInicio extends  Componente{
 
         return false;
     }
-    public boolean operation(ArrayList<Boolean> args) {
+    public boolean operation(Lista<Boolean> args) {
 
         return salidas.get(0).value;
     }

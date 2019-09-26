@@ -1,12 +1,9 @@
 package Logica;
 
-import Interfaz.Componente;
-import Interfaz.Entrada;
-import Interfaz.Main;
-import Interfaz.Salida;
+import Interfaz.*;
 
 import java.awt.Color;
-import java.util.ArrayList;
+
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -29,7 +26,7 @@ public class Nand extends Componente {
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
 
     }
-    public boolean operation(ArrayList<Boolean> args) {
+    public boolean operation(Lista<Boolean> args) {
         boolean entrada1 = args.get(0);
         boolean entrada2 = args.get(1);
         return !(entrada1&&entrada2);

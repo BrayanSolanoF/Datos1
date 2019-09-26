@@ -6,9 +6,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
-import java.util.ArrayList;
+
 
 /**
+ *
  * Esta clase funciona como ventana principal de la aplicacion.
  * En ella se:
  * Define lo relacionado con interfaz de usuario
@@ -22,8 +23,8 @@ public class Main   {
      *Los siguientes "fields" son usados para dar un # de ID a los objetos
      *
      * */
-    static ArrayList<Componente> componentes = new ArrayList<Componente>();
-    static ArrayList<Conexion> lineas= new ArrayList<Conexion>();
+    static Lista<Componente> componentes = new Lista<Componente>();
+    static Lista<Conexion> lineas= new Lista<Conexion>();
     public static int IDComponente = 0;
     public static int IDConector = 0;
     public static int IDConexion = 0;
@@ -250,7 +251,7 @@ public class Main   {
         frame.setVisible(true);
     }
 
-    //self-explanatory functions below
+
     void makeAnd() {
 
         modo = "addingAnd";
@@ -289,7 +290,7 @@ public class Main   {
         modo = "choosingOutput";
         mostrarEntradas = false;
         mostrarSalidas= true;
-        drawPanel.repaint(); //repainting is basically refreshing the GUI
+        drawPanel.repaint();
     }
 
     void makeStart() {
@@ -319,7 +320,7 @@ public class Main   {
 
             for (Componente gate : componentes) {
                 boolean act = true;
-                ArrayList<Boolean> inputValues = new ArrayList<Boolean>(); 
+              Lista<Boolean> inputValues = new Lista<Boolean>();
                 for (Entrada entrada : gate.entradas) {
                     if (!(entrada.hasValue)) {
                         act = false; 
@@ -371,7 +372,7 @@ public class Main   {
                             endsReached +=1;
                         }
 
-                        ArrayList<Componente> endPoints = new ArrayList<Componente>();
+                        Lista<Componente> endPoints = new Lista<Componente>();
                         for (Component componente : componentes) {
                             if (componente.equals("End")) {
                                 endPoints.add((Componente) componente);

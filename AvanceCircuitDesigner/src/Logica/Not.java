@@ -1,10 +1,8 @@
 package Logica;
-import Interfaz.Componente;
-import Interfaz.Entrada;
-import Interfaz.Main;
-import Interfaz.Salida;
+import Interfaz.*;
 
 import java.awt.Color;
+
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -26,5 +24,13 @@ public class Not extends Componente {
         new Entrada(Main.IDConector, this, 0, getHeight() / 2);
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
     }
+
+    public boolean operation(Lista<Boolean> args) {
+        boolean input1 = args.get(0);
+        boolean output = !input1;
+        return output;
+    }
+
+
 
 }

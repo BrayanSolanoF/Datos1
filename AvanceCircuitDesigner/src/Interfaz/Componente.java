@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.util.ArrayList;
+
 import javax.swing.JLabel;
 
 public class Componente extends JLabel implements MouseListener, MouseMotionListener {
@@ -17,16 +17,16 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
     public void toggle() {
 
     }
-    public boolean operation(ArrayList<Boolean> args) { //overwritten by subclasses
+    public boolean operation(Lista<Boolean> args) { //overwritten by subclasses
         return false;
     }
-    public ArrayList<Boolean> userOperation(ArrayList<Boolean> args) { //overwritten by subclasses
-        return (new ArrayList<Boolean>());
+    public Lista<Boolean> userOperation(Lista<Boolean> args) { //overwritten by subclasses
+        return (new Lista<Boolean>());
     }
     int value = 0;
-    ArrayList<Entrada> entradas = new ArrayList<Entrada>();
-    ArrayList<Entrada> toggles = new ArrayList<Entrada>();
-    ArrayList<Salida> salidas = new ArrayList<Salida>();
+    Lista<Entrada> entradas = new Lista<Entrada>();
+    Lista<Entrada> toggles = new Lista<Entrada>();
+    Lista<Salida> salidas = new Lista<Salida>();
     public Componente(int ID, String text, int x, int y) {
 
         super(text);

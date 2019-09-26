@@ -3,7 +3,7 @@ package Logica;
 import Interfaz.*;
 
 import java.awt.Color;
-import java.util.ArrayList;
+
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -22,7 +22,7 @@ public class Xnor extends Componente {
         new Entrada(Main.IDConector, this, 0, getHeight() - 6);
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
     }
-    public boolean operation(ArrayList<Boolean> args) {
+    public boolean operation(Lista<Boolean> args) {
         boolean entrada1 = args.get(0);
         boolean entrada2 = args.get(1);
         boolean salida;

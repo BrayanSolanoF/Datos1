@@ -1,14 +1,40 @@
 package Interfaz;
 
 import java.util.Iterator;
-import java.util.ListIterator;
+
+
+/**
+ * Esta es mi clase es una Lista, la cual es una lista Generica para manejra diferentes tipos de datos
+ *
+ * */
 
 public class Lista <T> implements Iterable<T>{
-
     @Override
     public Iterator<T> iterator() {
         return new CustomIterator<T>(this);
     }
+
+    public void add(T value){
+        Nodo<T> nodo = new Nodo<>(value);
+        if (cabeza == null)
+            cola = cabeza = nodo;
+        else{
+            cola.setNext(nodo);
+            cola = nodo;
+        }
+    }
+
+    public void remove(T conexion){
+        throw new UnsupportedOperationException();
+
+    }
+
+    public void remove(Lista<T> conexiones){
+        throw new UnsupportedOperationException();
+
+    }
+
+
 
     class CustomIterator<T> implements Iterator<T>{
 
@@ -34,8 +60,18 @@ public class Lista <T> implements Iterable<T>{
 
 
         private Nodo<T> cabeza = null;
+        private Nodo<T> cola = null;
 
         private int longitud = 0;
+
+
+
+
+
+        /**
+         * Este metodo es para insertar un valor en un index "n" de la lista
+         * @param n - index de la lista que se desea insertar
+         * */
 
         public  void add(int n, T componente){
             Nodo<T> nodo = new Nodo<>(componente);
@@ -53,6 +89,12 @@ public class Lista <T> implements Iterable<T>{
             }
             longitud++;
         }
+        /**
+         * Este valor obtiene un valor en un index "n" de la lista.
+         * @param n - Numero de posicion a obtener
+         * @return null
+         *
+         * */
         public T get(int n){
             if (cabeza == null){
                 return null;
@@ -71,6 +113,11 @@ public class Lista <T> implements Iterable<T>{
 
             }
         }
+        /**
+         * Este metodo  retorna el tamano de la lista
+         * @return variable longitud de la clase lista
+         *
+         * */
         public int size(){
             return longitud;
         }
@@ -79,6 +126,12 @@ public class Lista <T> implements Iterable<T>{
             return cabeza == null;
 
         }
+        /**
+         * Este metodo elimina el nodo de una posicion "n"
+         * @param n - Posicion del nodo a eliminar
+         *
+         * */
+
 
         public void remove(int n){
             if(cabeza != null){

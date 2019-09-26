@@ -2,11 +2,11 @@ package Interfaz;
 
 import java.awt.Color;
 import java.awt.Polygon;
-import java.util.ArrayList;
+
 
 public class Salida extends Conector{
 
-    ArrayList<Entrada> inputsReceivingThis = new ArrayList<Entrada>();
+    Lista<Entrada> inputsReceivingThis = new Lista<Entrada>();
 
     public Salida(int ID, Componente owner, int x, int y) {
         super(ID, owner, x, y);

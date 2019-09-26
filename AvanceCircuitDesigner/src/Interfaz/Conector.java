@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Shape;
 
-import java.util.ArrayList;
+
 
 public class Conector {
     boolean value;
@@ -14,7 +14,7 @@ public class Conector {
     boolean isOutput;
     int id;
     Componente componente;
-    ArrayList<Conexion> conexiones = new ArrayList<Conexion>();
+    Lista<Conexion> conexiones = new Lista<Conexion>();
     int ConexionesMaximas;
 
     int x, y;

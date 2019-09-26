@@ -1,14 +1,11 @@
 package Logica;
 
-import Interfaz.Entrada;
-import Interfaz.Main;
-import Interfaz.Componente;
-import Interfaz.Salida;
+import Interfaz.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
-import java.util.ArrayList;
+
 
 
 /**
@@ -32,7 +29,7 @@ public class And extends Componente {
         new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
 
     }
-    public boolean operation(ArrayList<Boolean> args) {
+    public boolean operation(Lista<Boolean> args) {
         boolean entrada1 = args.get(0);
         boolean entrada2 = args.get(1);
         return (entrada1&&entrada2);
