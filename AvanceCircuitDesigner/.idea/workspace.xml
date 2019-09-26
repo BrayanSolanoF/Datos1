@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Interfaz/Lista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaz/Nodo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/And.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Nor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Not.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Or.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xnor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Lógica/Xor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/And.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/Not.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Not.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/Or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Or.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/Xnor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xnor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lógica/Xor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +88,7 @@
       <workItem from="1568789786036" duration="29175000" />
       <workItem from="1569399892021" duration="8025000" />
       <workItem from="1569457323743" duration="15000" />
-      <workItem from="1569470498052" duration="773000" />
+      <workItem from="1569470498052" duration="1406000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -219,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569406751572</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Se implementa Iterador en mi lista y se relaizan pruebas del mismo">
+      <created>1569471552180</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1569471552180</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +244,7 @@
     <MESSAGE value="Se mas agregan compuertas" />
     <MESSAGE value="Se corrigen detalles en diferentes clases" />
     <MESSAGE value="Se logra alcanzar una base donde el codigo compila" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se logra alcanzar una base donde el codigo compila" />
+    <MESSAGE value="Se implementa Iterador en mi lista y se relaizan pruebas del mismo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se implementa Iterador en mi lista y se relaizan pruebas del mismo" />
   </component>
 </project>
