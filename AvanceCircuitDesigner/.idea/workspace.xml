@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AvanceCircuitDesigner/Interfaz/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Componente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Componente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Conector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Conector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Lista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Lista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Nodo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Salida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Salida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/And.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Not.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Not.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Or.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Xnor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xnor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Xor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +90,7 @@
       <workItem from="1568789786036" duration="29175000" />
       <workItem from="1569399892021" duration="8025000" />
       <workItem from="1569457323743" duration="15000" />
-      <workItem from="1569470498052" duration="8125000" />
+      <workItem from="1569470498052" duration="11682000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -231,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569471977056</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Se logra una base solida de la aplicacion">
+      <created>1569481088332</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1569481088333</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Se editan JavaDocs">
+      <created>1569481302559</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1569481302559</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +269,8 @@
     <MESSAGE value="Se logra alcanzar una base donde el codigo compila" />
     <MESSAGE value="Se implementa Iterador en mi lista y se relaizan pruebas del mismo" />
     <MESSAGE value="Se implementa Iterador en mi lista y se realizan pruebas del mismo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se implementa Iterador en mi lista y se realizan pruebas del mismo" />
+    <MESSAGE value="Se logra una base solida de la aplicacion" />
+    <MESSAGE value="Se editan JavaDocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se editan JavaDocs" />
   </component>
 </project>

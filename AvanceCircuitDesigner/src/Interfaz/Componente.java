@@ -8,12 +8,22 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JLabel;
 
+/**
+ * Esta clase es la clase padre para todos los componentes
+ *Maneja tanto eventos como metodos que se heredan a las compuertas, el metodo de simulacion, entradas y salidas.
+ * */
+
 public class Componente extends JLabel implements MouseListener, MouseMotionListener {
-
-    int numberConnected = 0;
-    int id;
-    public String type;
-
+    /**
+     * Necesarios para que funcione la aplicacion
+     * */
+    int numberConnected = 0;// Inicia sin nada conectado
+    int id;//Parte de un IDfeature
+    public String type; //Se establece de forma diferente dependiendo de la subclase
+    /**
+     * Este metodo sobreescribe solo el punto de inicio
+     *
+     * */
     public void toggle() {
 
     }
@@ -182,7 +192,10 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
     }
     @Override
 
-
+/**
+ * Este metodo es el encargado del drag para la plantilla
+ *
+ * */
     public void mouseDragged(MouseEvent e) {
         int newX = getX()  + (e.getX() -startDragX);
         int newY = getY() + (e.getY() -startDragY);
