@@ -1,6 +1,9 @@
 package Interfaz;
 import java.awt.*;
-
+/**
+ * Clase input (entrada)
+ * Esta clase es un tipo de conector
+ * */
 public class Entrada extends Conector {
     public Entrada(int ID, Componente owner, int x, int y) {
         super(ID,owner, x, y);

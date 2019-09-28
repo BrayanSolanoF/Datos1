@@ -5,7 +5,10 @@ import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
-
+/**
+ * Clase Punto final
+ * Esta clase almacena el resultado al evaluar las entradas en su respectiva compuerta
+ * */
 public class PuntoFinal extends Componente {
     PuntoFinal(int ID, int x, int y) {
         super(ID, "End", x, y);

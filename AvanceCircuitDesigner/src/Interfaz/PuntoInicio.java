@@ -6,14 +6,16 @@ import java.awt.Color;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
-
-public class PuntoInicio extends  Componente{
+/**
+ *Clase PuntoInicio
+ * Los puntos de inicio son los unicos componentes con un valor default
+ * Otros componentes solo almacenan valores en sus entradas o salidas
+ * */
+public class PuntoInicio extends  Componente {
 
     PuntoInicio(int ID, int x, int y) {
         super(ID, "Start", x, y);
         type = "Start";
-
-
         value = 0;
         this.setText(Integer.toString(value));
 
@@ -39,6 +41,9 @@ public class PuntoInicio extends  Componente{
 
         return salidas.get(0).value;
     }
+    /**
+     * Este metodo se encarga de pasar o hacer un "switch" en los valores del puntoInicial
+     * */
     public void toggle() {
         System.out.println("notificando");
         value +=1;

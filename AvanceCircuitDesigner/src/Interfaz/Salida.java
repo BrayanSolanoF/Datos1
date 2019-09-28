@@ -2,7 +2,10 @@ package Interfaz;
 
 import java.awt.Color;
 import java.awt.Polygon;
-
+/**
+ * Clase Output (Salida)
+ *Esta clase es un tipo de conector
+ * */
 
 public class Salida extends Conector{
 

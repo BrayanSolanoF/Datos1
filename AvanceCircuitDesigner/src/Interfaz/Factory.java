@@ -5,10 +5,15 @@ import java.awt.event.MouseEvent;
 
 /**
  *
- * Esta clase es un factory de las clases componente
+ * Esta clase es un factory de la clase componente
  */
 
  public class Factory {
+
+  /**
+   * Metodo static que selecciona e instancia cada clase, segun el componente.
+   * @return instancia de la clase componente.
+   * */
 
  public static Componente ComponentFactory(TypeComponent type, MouseEvent e) {
     if (type == TypeComponent.AND) {

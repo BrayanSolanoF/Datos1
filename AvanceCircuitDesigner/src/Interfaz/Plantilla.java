@@ -9,15 +9,14 @@ import java.awt.event.*;
 
 /**
  * Esta clase funciona como un canvas para realizar acciones sobre ella
- *
- * */
+ **/
 public class Plantilla extends JPanel {
 
     Plantilla(){
 
         addMouseListener(new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void mouseClicked(MouseEvent e) { // Haciendo click en la plantilla o screen se hacen diferentes cosas dependiendo del modo
                 super.mouseClicked(e);
                 if (Main.modo.equals("addingAnd")) {
                     Componente c = new Factory().ComponentFactory(TypeComponent.AND, e);
@@ -48,8 +47,6 @@ public class Plantilla extends JPanel {
     }
     /**
      * Este metodo permite llamar al drawPanel.repaint
-     *
-     *
      * */
     public void paintComponent(Graphics g){
         //Pinta el drawPanel y asocia componentes

@@ -23,25 +23,24 @@ public class Main   {
      *Los siguientes "fields" son usados para dar un # de ID a los objetos
      *
      * */
-    static Lista<Componente> componentes = new Lista<Componente>();
-    static Lista<Conexion> lineas= new Lista<Conexion>();
+    static Lista<Componente> componentes = new Lista<Componente>(); //Lista de todos los componentes en la aplicacion
+    static Lista<Conexion> lineas= new Lista<Conexion>(); //Lista de todas las conexiones entre las compuertas en la aplicacion
     public static int IDComponente = 0;
     public static int IDConector = 0;
     public static int IDConexion = 0;
-    static String modo = ""; //Preguntar
+    static String modo = "";
     static boolean mostrarEntradas = true, mostrarSalidas = true;
     static Salida SalidaSelecionada= null;
 
     //Titulo Ventana
     static JFrame frame = new JFrame("Circuit Designer");
-    //Pantilla para compuertas
+    //Pantilla o "Canvas"
     static Plantilla drawPanel = new Plantilla();
     //Construtor
     Main(){
 
         //Cuando se cierre la ventana nuestro programa debe acabar
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //.....
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //Hace visible la ventana
         frame.setVisible(true);
@@ -54,9 +53,9 @@ public class Main   {
         splitPane.setTopComponent(buttonspanel);
         frame.add(splitPane, BorderLayout.PAGE_START);
 
-        //Botones como Jbuttons patra implementarlos a JPanel
+        //Botones como Jbuttons patra implementarlos a splitPane
         JButton andbutton = new JButton();
-        //Se busca funcion para utilizar los botones con imagenes de cada componente
+        //Se busca funcion para utilizar los Jbuttons con imagenes de cada componente
         try {
             Image img = ImageIO.read(getClass().getResource("./images/and.png"));
             andbutton.setIcon(new ImageIcon(img));
@@ -158,8 +157,12 @@ public class Main   {
         buttonspanel.add(simulateButton);
         buttonspanel.add(eraseButton);
 
+        //Hasta este punto llegan el formato de las cosas del GUI
+        //Acontinuacion vienen los eventos de los botones
+        /**
+         * actionPerformed es el unico metodo del paquete java.awt.event y es invocado al momento de hacer click en algun componente
+         * */
 
-        
         andbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
@@ -251,7 +254,10 @@ public class Main   {
         frame.setVisible(true);
     }
 
-
+    /**
+     * Funciones para cada boton de acuerdo a cada modo
+     *
+     * */
     void makeAnd() {
 
         modo = "addingAnd";
@@ -308,13 +314,15 @@ public class Main   {
         modo = "erase";
 
     }
-
+    /**
+     *  funcion para simular dentro del canvas
+     * */
     int simulate() {
-        int toBeReturned = -1;
+        int toBeReturned = -1; // valor de error, se retorna solo en caso de que no funcione la funcion
 
         int keepGoing = 0;
 
-        while (keepGoing < 200) { 
+        while (keepGoing < 200) { //ciclo para asegurar que se alcanzo el final del circuito
             keepGoing++;
             int endsReached = 0;
 
@@ -329,7 +337,7 @@ public class Main   {
                         inputValues.add(entrada.value);
                     }
                 }
-                if (act) {  
+                if (act) {  //Asumiendo que la compuerta tiene valores en sus entradas
                     if (gate.type.equals("User")) { 
                         
                         int nextOne=0;
@@ -340,7 +348,7 @@ public class Main   {
                         }
                     }
                     else { 
-                        for (Salida out : gate.salidas){
+                        for (Salida out : gate.salidas){ // Transfiere valores desde las salidas hasta las entradas que estan conectadas
                             out.value = gate.operation(inputValues);
                         }
                     }
@@ -378,8 +386,8 @@ public class Main   {
                                 endPoints.add((Componente) componente);
                             }
                         }
-                        if (endsReached >= endPoints.size()) { 
-                            toBeReturned = 0; 
+                        if (endsReached >= endPoints.size()) { // Si todos los modos se alcanzaron con exito, entonces el circuito se completa
+                            toBeReturned = 0; // retorna valor de exito
 
                         }
 
