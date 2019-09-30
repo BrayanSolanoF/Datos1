@@ -3,43 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Componente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Conector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Lista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Lista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Nodo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Salida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/Thread.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Thread.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/and.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/and.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/end.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/end.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/erase.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/erase.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/nand.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/nand.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/nor.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/nor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/not.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/not.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/or.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/or.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/simulate.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/simulate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/start.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/start.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/xnor.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/xnor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/images/xor.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/xor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/And.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Not.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Not.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Or.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Xnor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xnor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logica/Xor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connector.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,7 +105,7 @@
       <workItem from="1568789786036" duration="29175000" />
       <workItem from="1569399892021" duration="8025000" />
       <workItem from="1569457323743" duration="15000" />
-      <workItem from="1569470498052" duration="52405000" />
+      <workItem from="1569470498052" duration="53743000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -275,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569634460632</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Se corrigue error al cargar imagenes en paleta">
+      <created>1569804367621</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1569804367623</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +309,7 @@
     <MESSAGE value="Se editan JavaDocs" />
     <MESSAGE value="Se agregan comentarios y javaDocs a la clase componente" />
     <MESSAGE value="Se editan JavaDocs de cada clase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se editan JavaDocs de cada clase" />
+    <MESSAGE value="Se corrigue error al cargar imagenes en paleta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se corrigue error al cargar imagenes en paleta" />
   </component>
 </project>

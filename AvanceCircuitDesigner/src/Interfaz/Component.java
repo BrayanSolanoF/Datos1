@@ -109,7 +109,7 @@ public class Component extends JLabel implements MouseListener, MouseMotionListe
 
     }
     /**
-     * Este es el click de click and drag
+     * Este metodo es el click de click and drag
      * */
     @Override
     public void mousePressed(MouseEvent e) {

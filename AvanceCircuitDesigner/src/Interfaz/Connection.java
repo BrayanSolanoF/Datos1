@@ -12,11 +12,11 @@ import javax.swing.JComponent;
 
 public class Connection extends JComponent {
 
-    Output output;
-    Input input;
+    Output output;// Conexiones sabe que la salida y la entrada estan conectadas
+    Input input;//Conexiones sabe que la entrada y la salida estan conectadas
     int id;
     public Connection(int ID, Output theOutput, Input theInput) {
-        setDoubleBuffered(true);
+        setDoubleBuffered(true);//Parte de lo grafico
         id = ID;
         Main.currentConnectionID++;
 
@@ -33,7 +33,7 @@ public class Connection extends JComponent {
         Line2D.Double line = new Line2D.Double(output.getX(), output.getY(), input.getX(), input.getY());
         g2d.draw(line);
         output.inputsReceivingThis.add(input);
-        if (Main.mode.equals("choosingInput")) {
+        if (Main.mode.equals("choosingInput")) {//Ahora la salida sabe hacia adonde va
             input.component.numberConnected +=1;
 
         }

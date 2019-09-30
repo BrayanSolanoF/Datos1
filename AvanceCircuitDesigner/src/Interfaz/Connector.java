@@ -10,7 +10,7 @@ import java.awt.Shape;
  * Las entradas y salidas son los cuadrados rojos y azules en las compuertas
  * */
 
-abstract class Connector {
+public class Connector {
     boolean value;
     boolean hasValue = false;
     boolean isInput;
