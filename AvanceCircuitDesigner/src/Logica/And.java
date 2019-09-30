@@ -21,9 +21,8 @@ public class And extends Component {
         setVerticalAlignment(SwingConstants.CENTER);
         setHorizontalAlignment(SwingConstants.CENTER);
         setBounds(x, y, 70, 30);
-        //JLabel jLabelObject = new JLabel();
-        //jLabelObject.setIcon(new ImageIcon("./images/ad"));
         setBorder(new LineBorder(Color.black, 1));
+        //Se crean dos salidas y una entrada
         new Input(Main.currentConnectorID, this, 0, 6);
         new Input(Main.currentConnectorID, this, 0, getHeight() - 6);
         new Output(Main.currentConnectorID, this, getWidth(), getHeight() / 2);

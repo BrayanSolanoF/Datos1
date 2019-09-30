@@ -16,7 +16,7 @@ public class Output extends Connector {
         isOutput = true;
         owner.addOutput(this);
        maxConnections = 100;
-
+        //Define como se ven las salidas
         Polygon p = new Polygon();
         p.addPoint(x - w, y - h / 2);
         p.addPoint(x, y - h/2);

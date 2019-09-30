@@ -21,7 +21,7 @@ public class Or extends Component {
         setHorizontalAlignment(SwingConstants.CENTER);
         setBounds(x, y, 70, 30);
         setBorder(new LineBorder(Color.black, 1));
-
+        //Crea dos entradas y una salida
         new Input(Main.currentConnectorID, this, 0, 6);
         new Input(Main.currentConnectorID, this, 0, getHeight() - 6);
         new Output(Main.currentConnectorID, this, getWidth(), getHeight() / 2);

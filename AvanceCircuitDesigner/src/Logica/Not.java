@@ -19,7 +19,7 @@ public class Not extends Component {
         setHorizontalAlignment(SwingConstants.CENTER);
         setBounds(x, y, 70, 30);
         setBorder(new LineBorder(Color.black, 1));
-
+        //Crea una entradas y una salida
         new Input(Main.currentConnectorID, this, 0, getHeight() / 2);
         new Output(Main.currentConnectorID, this, getWidth(), getHeight() / 2);
     }

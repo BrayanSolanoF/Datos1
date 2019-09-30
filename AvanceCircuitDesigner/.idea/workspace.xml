@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="Se agrega documentacion en clase Conexion">
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Lista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Lista.java" afterDir="false" />
+    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Plantilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoFinal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/PuntoInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/And.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/And.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Nand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Nor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Nor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Not.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Not.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Or.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Or.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Xnor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xnor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Xor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Xor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +112,7 @@
       <workItem from="1568789786036" duration="29175000" />
       <workItem from="1569399892021" duration="8025000" />
       <workItem from="1569457323743" duration="15000" />
-      <workItem from="1569470498052" duration="54567000" />
+      <workItem from="1569470498052" duration="55689000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -274,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569808081540</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Se agregan JavaDocs en diferentes clases y mas comentarios">
+      <created>1569809136752</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1569809136753</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +332,7 @@
     <MESSAGE value="Se editan JavaDocs de cada clase" />
     <MESSAGE value="Se corrigue error al cargar imagenes en paleta" />
     <MESSAGE value="Se agrega documentacion en clase Componente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agrega documentacion en clase Componente" />
+    <MESSAGE value="Se agregan JavaDocs en diferentes clases y mas comentarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan JavaDocs en diferentes clases y mas comentarios" />
   </component>
 </project>

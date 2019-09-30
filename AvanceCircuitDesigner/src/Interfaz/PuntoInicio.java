@@ -16,17 +16,19 @@ public class PuntoInicio extends Component {
     PuntoInicio(int ID, int x, int y) {
         super(ID, "Start", x, y);
         type = "Start";
-        value = 0;
+
+
+        value = 0;//Los puntos de inicio son los unicos componenentes con un valor
         this.setText(Integer.toString(value));
 
         setVerticalAlignment(SwingConstants.CENTER);
         setHorizontalAlignment(SwingConstants.CENTER);
         setBounds(x, y, 70, 30);
         setBorder(new LineBorder(Color.black, 1));
-
+        //
         Output bye = new Output(Main.currentConnectorID, this, getWidth(), getHeight() /2);
         Input hi = new Input(Main.currentConnectorID, this, 0, getHeight() /2);
-        hi.hasValue = true;
+        hi.hasValue = true;//hasValue solo obtiene true si hay una conexion en la compuerta
 
 
         hi.maxConnections = 0;
@@ -49,7 +51,7 @@ public class PuntoInicio extends Component {
         value +=1;
         value %= 2;
         if (value == 0) {
-            outputs.get(0).value = false;
+            outputs.get(0).value = false;//Puntos de entrada tiene valores enteros pero el valor de salida es booleano
         }
         else {
             outputs.get(0).value = true;
