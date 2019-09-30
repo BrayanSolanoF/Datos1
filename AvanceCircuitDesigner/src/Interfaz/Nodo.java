@@ -4,16 +4,16 @@ package Interfaz;
  *
  * */
 public class Nodo<T> {
-    public T componente;
+    public T component;
     public Nodo<T> siguiente = null;
 
     /**
      * Constructor de la clase Nodo que le asigna un valor al nodo
-     * @param componente - valor del nodo
+     * @param component - valor del nodo
      * */
 
-    public Nodo(T componente){
-        this.componente = componente;
+    public Nodo(T component){
+        this.component = component;
     }
 
     public void setNext(Nodo<T> next)
@@ -21,7 +21,7 @@ public class Nodo<T> {
         this.siguiente = next;
     }
 
-    public T getComponente() {
-        return componente;
+    public T getComponent() {
+        return component;
     }
 }

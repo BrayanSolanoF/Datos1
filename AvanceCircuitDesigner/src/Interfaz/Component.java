@@ -1,6 +1,5 @@
 package Interfaz;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -13,7 +12,7 @@ import javax.swing.JLabel;
  *Maneja tanto eventos como metodos que se heredan a las compuertas, el metodo de simulacion, entradas y salidas.
  * */
 
-public class Componente extends JLabel implements MouseListener, MouseMotionListener {
+public class Component extends JLabel implements MouseListener, MouseMotionListener {
     /**
      * Necesarios para que funcione la aplicacion
      * */
@@ -34,29 +33,29 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
         return (new Lista<Boolean>());
     }
     int value = 0;//Da el valor default a la compuerta, (Es por esto que entrada tiene un cero default)
-    Lista<Entrada> entradas = new Lista<Entrada>();//Lista de los componentes entradas
-    Lista<Entrada> toggles = new Lista<Entrada>();//Lista de los componentes para pasar las entradas (Pasar de 0 a 1 ya que default de entrada es 0)
-    Lista<Salida> salidas = new Lista<Salida>();//Lista de las salidas
-    public Componente(int ID, String text, int x, int y) {
+    Lista<Input> inputs = new Lista<Input>();//Lista de los componentes entradas
+    Lista<Input> toggles = new Lista<Input>();//Lista de los componentes para pasar las entradas (Pasar de 0 a 1 ya que default de entrada es 0)
+    Lista<Output> outputs = new Lista<Output>();//Lista de las salidas
+    public Component(int ID, String text, int x, int y) {
 
         super(text);//Se extiende JLabel esto hace el JLabel con el texto dado
         id = ID;
-        Main.IDComponente++;
+        Main.currentComponentID++;
 
-        Main.componentes.add(this);// Agrega los componentes a la lista principal
+        Main.components.add(this);// Agrega los componentes a la lista principal
         addMouseListener(this);//Permite los mouse events en los componentes
         addMouseMotionListener(this);
         Main.drawPanel.add(this);//Hace que el componente aparezca en la plantilla
     }
 
-    public void addOutput(Salida o) {
-        salidas.add(o);
+    public void addOutput(Output o) {
+        outputs.add(o);
     }
-    public void addInput(Entrada i) {
-        entradas.add(i);
+    public void addInput(Input i) {
+        inputs.add(i);
     }
 
-    public void addtoToggles(Entrada i) {
+    public void addtoToggles(Input i) {
         toggles.add(i);
     }
     /**
@@ -71,19 +70,19 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
 
         Graphics2D g2d = (Graphics2D) g;
 
-        if (Main.mostrarEntradas) { // Las entradas solo se muestran cuando son apropiadas
-            for (Entrada in : entradas) {
+        if (Main.showInputs) { // Las entradas solo se muestran cuando son apropiadas
+            for (Input in : inputs) {
                 in.paintConnector(g2d);
             }
         }
 
         else {
-            for (Entrada tog : toggles) {
+            for (Input tog : toggles) {
                 tog.paintConector(g2d);
             }
         }
-        if (Main.mostrarSalidas) {
-            for (Salida out : salidas) { //Salidas solo se muestran cuando son apropiadas
+        if (Main.showOutputs) {
+            for (Output out : outputs) { //Salidas solo se muestran cuando son apropiadas
                 if (out.isAvailable()) {
                     out.paintConnector(g2d);
                 }
@@ -115,38 +114,38 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
     @Override
     public void mousePressed(MouseEvent e) {
 
-        System.out.println(Main.modo);
-        if (Main.modo.equals("erase")) { //Cuando esta en modo erase y se hace click sobre un componente deberia borrarse
+        System.out.println(Main.mode);
+        if (Main.mode.equals("erase")) { //Cuando esta en modo erase y se hace click sobre un componente deberia borrarse
 
 
             Main.drawPanel.remove(this);
-            Main.componentes.remove(this);
+            Main.components.remove(this);
             //El siguiente for remueve todas las conexiones asociadas con las entradas
-            for (Entrada input : this.entradas) {
+            for (Input input : this.inputs) {
 
-                for (Conexion connection : input.conexiones) {
+                for (Connection connection : input.connections) {
 
                     Main.drawPanel.remove(connection);
-                    Main.lineas.remove(connection);
+                    Main.lines.remove(connection);
 
-                    connection.salida.conexiones.remove(connection);
+                    connection.output.connections.remove(connection);
 
 
                 }
-                input.conexiones.remove(input.conexiones);
+                input.connections.remove(input.connections);
             }
-            for (Salida output : this.salidas) {
-                for (Conexion connection : output.conexiones) {
+            for (Output output : this.outputs) {
+                for (Connection connection : output.connections) {
                     Main.drawPanel.remove(connection);
-                    Main.lineas.remove(connection);
+                    Main.lines.remove(connection);
 
-                    connection.entrada.conexiones.remove(connection);
+                    connection.input.connections.remove(connection);
                 }
-                output.conexiones.remove(output.conexiones);
+                output.connections.remove(output.connections);
             }
 
             Main.drawPanel.repaint();
-            Main.modo = ""; //Si se necesita borrar de nuevo hay que hacer click en borrar de nuevo
+            Main.mode = ""; //Si se necesita borrar de nuevo hay que hacer click en borrar de nuevo
 
         }
         startDragX = e.getX();// Localizacion del mouse en todoo momento que este clickeado
@@ -167,35 +166,35 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
      * */
     @Override
     public void mouseClicked(MouseEvent e) {
-        for (Entrada in : entradas) {
-            if (in.componente.type.equals("Start") && in.contains(e.getPoint())){
+        for (Input in : inputs) {
+            if (in.component.type.equals("Start") && in.contains(e.getPoint())){
                 System.out.println("testtoggle");
-                in.componente.toggle();
+                in.component.toggle();
 
             }
         }
-        if (Main.modo.equals("choosingInput")) { // Cuando se este en Main.modo elegir entrada, se elige la entrada y luego se dibuja la linea
+        if (Main.mode.equals("choosingInput")) { // Cuando se este en Main.modo elegir entrada, se elige la entrada y luego se dibuja la linea
                                                  // Cuando se esta en este modo tambien se epuede elegir una salida para la linea (SalidaSeleccionada)
-            for (Entrada in : entradas) {
+            for (Input in : inputs) {
                 if (in.isAvailable() && in.contains(e.getPoint())) {
 
-                    Main.lineas.add(new Conexion(Main.IDConexion, Main.SalidaSelecionada, in));
+                    Main.lines.add(new Connection(Main.currentConnectionID, Main.selectedOutput, in));
 
                     Main.drawPanel.repaint();
-                    Main.modo = "";
-                    Main.mostrarSalidas = true;
+                    Main.mode = "";
+                    Main.showOutputs = true;
 
                 }
             }
         }
-        if (Main.modo.equals("choosingOutput")) { // Cuando se este en Main.modo elegir entrada, se elige la entrada y luego pasa a Main.modo elegir salida
-            for (Salida out : salidas) {
+        if (Main.mode.equals("choosingOutput")) { // Cuando se este en Main.modo elegir entrada, se elige la entrada y luego pasa a Main.modo elegir salida
+            for (Output out : outputs) {
                 if (out.isAvailable() && out.contains(e.getPoint())) {
 
-                    Main.SalidaSelecionada = out; //La aplicacion sabe donde dibujar la conexion desde que se selecciono la entrada
-                    Main.mostrarSalidas = false;
-                    Main.modo = "choosingInput"; //Despues de elegir la salida se elige la entrada
-                    Main.mostrarEntradas = true;
+                    Main.selectedOutput = out; //La aplicacion sabe donde dibujar la conexion desde que se selecciono la entrada
+                    Main.showOutputs = false;
+                    Main.mode = "choosingInput"; //Despues de elegir la salida se elige la entrada
+                    Main.showInputs = true;
 
                     Main.drawPanel.repaint();
 
@@ -220,7 +219,7 @@ public class Componente extends JLabel implements MouseListener, MouseMotionList
     }
     @Override
     public void mouseMoved(MouseEvent arg0) {
-        // Metodo sin uso pero necesario
+        //MetodoSin uso pero necesario
     }
 
 

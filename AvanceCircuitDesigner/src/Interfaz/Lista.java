@@ -24,12 +24,12 @@ public class Lista <T> implements Iterable<T>{
         }
     }
 
-    public void remove(T conexion){
+    public void remove(T connections){
         throw new UnsupportedOperationException();
 
     }
 
-    public void remove(Lista<T> conexiones){
+    public void remove(Lista<T> connections){
         throw new UnsupportedOperationException();
 
     }
@@ -51,7 +51,7 @@ public class Lista <T> implements Iterable<T>{
 
         @Override
         public T next() {
-            T data = current.componente;
+            T data = current.component;
             current = current.siguiente;
             return data;
         }
@@ -85,7 +85,7 @@ public class Lista <T> implements Iterable<T>{
                 if (contador!= n){
                     return null;
                 }else{
-                    return puntero.componente;
+                    return puntero.component;
                 }
 
             }

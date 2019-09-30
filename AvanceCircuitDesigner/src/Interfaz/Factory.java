@@ -4,7 +4,6 @@ import Logica.*;
 import java.awt.event.MouseEvent;
 
 /**
- *
  * Esta clase es un factory de la clase componente
  */
 
@@ -15,26 +14,26 @@ import java.awt.event.MouseEvent;
    * @return instancia de la clase componente.
    * */
 
- public static Componente ComponentFactory(TypeComponent type, MouseEvent e) {
+ public static Component ComponentFactory(TypeComponent type, MouseEvent e) {
     if (type == TypeComponent.AND) {
-        return new And(Main.IDComponente, e.getX(), e.getY());
+        return new And(Main.currentComponentID, e.getX(), e.getY());
  }
- if (type == TypeComponent.OR) {
- return new Or(Main.IDComponente, e.getX(), e.getY());
+    if (type == TypeComponent.OR) {
+        return new Or(Main.currentComponentID, e.getX(), e.getY());
  }
- if (type == TypeComponent.NAND) {
- return new Nand(Main.IDComponente, e.getX(), e.getY());
+    if (type == TypeComponent.NAND) {
+        return new Nand(Main.currentComponentID, e.getX(), e.getY());
  }
- if (type == TypeComponent.NOR) {
- return new Nor(Main.IDComponente, e.getX(), e.getY());
+    if (type == TypeComponent.NOR) {
+        return new Nor(Main.currentComponentID, e.getX(), e.getY());
  }
- if (type == TypeComponent.NOT) {
- return new Not(Main.IDComponente, e.getX(), e.getY());
+    if (type == TypeComponent.NOT) {
+        return new Not(Main.currentComponentID, e.getX(), e.getY());
  }
- if (type == TypeComponent.XNOR) {
- return new Xnor(Main.IDComponente, e.getX(), e.getY());
+    if (type == TypeComponent.XNOR) {
+        return new Xnor(Main.currentComponentID, e.getX(), e.getY());
  } else {
- return new Xor(Main.IDComponente, e.getX(), e.getY());
- }
- }
+        return new Xor(Main.currentComponentID, e.getX(), e.getY());
+      }
+   }
  }

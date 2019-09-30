@@ -17,27 +17,27 @@ import java.awt.event.ActionListener;
  *
  * */
 
-public class Main   {
+public class Main {
 
     /**
-     *Los siguientes "fields" son usados para dar un # de ID a los objetos
-     *
-     * */
-    static Lista<Componente> componentes = new Lista<Componente>(); //Lista de todos los componentes en la aplicacion
-    static Lista<Conexion> lineas= new Lista<Conexion>(); //Lista de todas las conexiones entre las compuertas en la aplicacion
-    public static int IDComponente = 0;
-    public static int IDConector = 0;
-    public static int IDConexion = 0;
-    static String modo = "";
-    static boolean mostrarEntradas = true, mostrarSalidas = true;
-    static Salida SalidaSelecionada= null;
+     * Los siguientes "fields" son usados para dar un # de ID a los objetos
+     */
+    static Lista<Component> components = new Lista<Component>(); //Lista de todos los componentes en la aplicacion
+    static Lista<Connection> lines = new Lista<Connection>(); //Lista de todas las conexiones entre las compuertas en la aplicacion
+    public static int currentComponentID = 0;
+    public static int currentConnectorID = 0;
+    public static int currentConnectionID = 0;
+    static String mode = "";
+    static boolean showInputs = true, showOutputs = true;
+    static Output selectedOutput = null;
 
     //Titulo Ventana
     static JFrame frame = new JFrame("Circuit Designer");
     //Pantilla o "Canvas"
     static Plantilla drawPanel = new Plantilla();
+
     //Construtor
-    Main(){
+    Main() {
 
         //Cuando se cierre la ventana nuestro programa debe acabar
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,49 +51,49 @@ public class Main   {
         JPanel buttonspanel = new JPanel();
         //Split donde se encuentras los botones
         splitPane.setTopComponent(buttonspanel);
-        frame.add(splitPane, BorderLayout.PAGE_START);
+        frame.add(splitPane, BorderLayout.PAGE_END);
 
         //Botones como Jbuttons patra implementarlos a splitPane
         JButton andbutton = new JButton();
         //Se busca funcion para utilizar los Jbuttons con imagenes de cada componente
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/and.png"));
+            Image img = ImageIO.read(getClass().getResource("./and.png"));
             andbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
-            System.out.println(ex);
+            System.out.println();
         }
 
         JButton orbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/or.png"));
+            Image img = ImageIO.read(getClass().getResource("./or.png"));
             orbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton notbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/not.png"));
+            Image img = ImageIO.read(getClass().getResource("./not.png"));
             notbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton nandbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/nand.png"));
+            Image img = ImageIO.read(getClass().getResource("./nand.png"));
             nandbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton norbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/nor.png"));
+            Image img = ImageIO.read(getClass().getResource("./nor.png"));
             norbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton xorbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/xor.png"));
+            Image img = ImageIO.read(getClass().getResource("./xor.png"));
             xorbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
@@ -101,48 +101,48 @@ public class Main   {
 
         JButton xnorbutton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/xnor.png"));
+            Image img = ImageIO.read(getClass().getResource("./xnor.png"));
             xnorbutton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton newConnectionButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/Thread.png"));
+            Image img = ImageIO.read(getClass().getResource("./Thread.png"));
             newConnectionButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton startButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/start.png"));
+            Image img = ImageIO.read(getClass().getResource("./start.png"));
             startButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton endButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/end.png"));
+            Image img = ImageIO.read(getClass().getResource("./end.png"));
             endButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton simulateButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/simulate.png"));
+            Image img = ImageIO.read(getClass().getResource("./simulate.png"));
             simulateButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
         JButton eraseButton = new JButton();
         try {
-            Image img = ImageIO.read(getClass().getResource("./images/erase.png"));
+            Image img = ImageIO.read(getClass().getResource("./erase.png"));
             eraseButton.setIcon(new ImageIcon(img));
         } catch (Exception ex) {
             System.out.println(ex);
         }
 
-        
+
         //Agregar botones a la paleta
         buttonspanel.add(andbutton);
         buttonspanel.add(orbutton);
@@ -171,7 +171,6 @@ public class Main   {
         });
 
 
-
         orbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
@@ -186,7 +185,7 @@ public class Main   {
             }
         });
 
-        nandbutton.addActionListener(new ActionListener(){
+        nandbutton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -194,7 +193,7 @@ public class Main   {
             }
         });
 
-        norbutton.addActionListener(new ActionListener(){
+        norbutton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -202,7 +201,7 @@ public class Main   {
             }
         });
 
-        xorbutton.addActionListener(new ActionListener(){
+        xorbutton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -210,7 +209,7 @@ public class Main   {
             }
         });
 
-        xnorbutton.addActionListener(new ActionListener(){
+        xnorbutton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -256,67 +255,67 @@ public class Main   {
 
     /**
      * Funciones para cada boton de acuerdo a cada modo
-     *
-     * */
-    void makeAnd() {
+     */
+    private void makeAnd() {
 
-        modo = "addingAnd";
+        mode = "addingAnd";
     }
 
     void makeOr() {
 
-        modo = "addingOr";
+        mode = "addingOr";
     }
 
     void makeNot() {
 
-        modo = "addingNot";
+        mode = "addingNot";
     }
 
-    void makeNand(){
+    void makeNand() {
 
-        modo = "addingNand";
+        mode = "addingNand";
     }
 
-    void makeNor(){
-        modo = "addingNor";
+    void makeNor() {
+        mode = "addingNor";
     }
 
-    void makeXor(){
+    void makeXor() {
 
-        modo = "addingXor";
+        mode = "addingXor";
     }
 
-    void makeXnor(){
-        modo = "addingXnor";
+    void makeXnor() {
+        mode = "addingXnor";
     }
 
     void makeConnection() {
 
-        modo = "choosingOutput";
-        mostrarEntradas = false;
-        mostrarSalidas= true;
+        mode = "choosingOutput";
+        showInputs = false;
+        showOutputs = true;
         drawPanel.repaint();
     }
 
     void makeStart() {
 
-        modo = "addingStart";
+        mode = "addingStart";
     }
 
     void makeEnd() {
 
-        modo = "addingEnd";
+        mode = "addingEnd";
     }
 
     void makeErase() {
 
-        modo = "erase";
+        mode = "erase";
 
     }
+
     /**
-     *  funcion para simular dentro del canvas
-     * */
+     * funcion para simular dentro del canvas
+     */
     int simulate() {
         int toBeReturned = -1; // valor de error, se retorna solo en caso de que no funcione la funcion
 
@@ -326,34 +325,32 @@ public class Main   {
             keepGoing++;
             int endsReached = 0;
 
-            for (Componente gate : componentes) {
+            for (Component gate : components) {
                 boolean act = true;
-              Lista<Boolean> inputValues = new Lista<Boolean>();
-                for (Entrada entrada : gate.entradas) {
-                    if (!(entrada.hasValue)) {
-                        act = false; 
-                    }
-                    else {
-                        inputValues.add(entrada.value);
+                Lista<Boolean> inputValues = new Lista<Boolean>();
+                for (Input input : gate.inputs) {
+                    if (!(input.hasValue)) {
+                        act = false;
+                    } else {
+                        inputValues.add(input.value);
                     }
                 }
                 if (act) {  //Asumiendo que la compuerta tiene valores en sus entradas
-                    if (gate.type.equals("User")) { 
-                        
-                        int nextOne=0;
-                        for (Salida out : gate.salidas) {
+                    if (gate.type.equals("User")) {
+
+                        int nextOne = 0;
+                        for (Output out : gate.outputs) {
                             System.out.println("nextone is " + nextOne + "input value: " + inputValues + " value is " + (gate.userOperation(inputValues)));
                             out.value = gate.userOperation(inputValues).get(nextOne);
-                            nextOne ++;
+                            nextOne++;
                         }
-                    }
-                    else { 
-                        for (Salida out : gate.salidas){ // Transfiere valores desde las salidas hasta las entradas que estan conectadas
+                    } else {
+                        for (Output out : gate.outputs) { // Transfiere valores desde las salidas hasta las entradas que estan conectadas
                             out.value = gate.operation(inputValues);
                         }
                     }
-                    for (Salida out : gate.salidas) { 
-                        for (Entrada input : out.inputsReceivingThis) {
+                    for (Output out : gate.outputs) {
+                        for (Input input : out.inputsReceivingThis) {
 
 
                             input.value = out.value;
@@ -363,27 +360,25 @@ public class Main   {
                     if (gate.type.equals("End")) {
                         boolean reached = false;
                         String result;
-                        if (gate.entradas.get(0).value == false) {
+                        if (!gate.inputs.get(0).value) {
                             result = Integer.toString(0);
                             reached = true;
-                        }
-                        else if (gate.entradas.get(0).value == true) {
+                        } else if (gate.inputs.get(0).value) {
                             result = Integer.toString(1);
                             reached = true;
-                        }
-                        else { 
+                        } else {
                             result = "";
                         }
 
-                        if (reached) { 
+                        if (reached) {
                             gate.setText(result);
-                            endsReached +=1;
+                            endsReached += 1;
                         }
 
-                        Lista<Componente> endPoints = new Lista<Componente>();
-                        for (Component componente : componentes) {
-                            if (componente.equals("End")) {
-                                endPoints.add((Componente) componente);
+                        Lista<Component> endPoints = new Lista<Component>();
+                        for (Component component : components) {
+                            if (component.equals("End")) {
+                                endPoints.add((Component) component);
                             }
                         }
                         if (endsReached >= endPoints.size()) { // Si todos los modos se alcanzaron con exito, entonces el circuito se completa
@@ -392,8 +387,7 @@ public class Main   {
                         }
 
                     }
-                }
-                else {
+                } else {
 
                 }
 
@@ -404,10 +398,7 @@ public class Main   {
         return toBeReturned;
 
 
-
-
     }
-
 
 
 

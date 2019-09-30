@@ -7,15 +7,15 @@ import java.awt.Polygon;
  *Esta clase es un tipo de conector
  * */
 
-public class Salida extends Conector{
+public class Output extends Connector {
 
-    Lista<Entrada> inputsReceivingThis = new Lista<Entrada>();
+    Lista<Input> inputsReceivingThis = new Lista<Input>();
 
-    public Salida(int ID, Componente owner, int x, int y) {
+    public Output(int ID, Component owner, int x, int y) {
         super(ID, owner, x, y);
         isOutput = true;
         owner.addOutput(this);
-        ConexionesMaximas = 100;
+       maxConnections = 100;
 
         Polygon p = new Polygon();
         p.addPoint(x - w, y - h / 2);

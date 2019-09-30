@@ -1,6 +1,7 @@
 package Logica;
 
 import Interfaz.*;
+import Interfaz.Component;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -9,12 +10,11 @@ import java.awt.*;
 
 
 /**
- * Esta clase representa el componente AND
- *
+ * Esta clase representa la compuerta o componente AND
  * */
 
 
-public class And extends Componente {
+public class And extends Component {
     public And(int ID, int x, int y){
         super(ID, "AND",  x, y);
         type = "And";
@@ -24,11 +24,15 @@ public class And extends Componente {
         //JLabel jLabelObject = new JLabel();
         //jLabelObject.setIcon(new ImageIcon("./images/ad"));
         setBorder(new LineBorder(Color.black, 1));
-        new Entrada(Main.IDConector, this, 0, 6);
-        new Entrada(Main.IDConector, this, 0, getHeight() - 6);
-        new Salida(Main.IDConector, this, getWidth(), getHeight() / 2);
+        new Input(Main.currentConnectorID, this, 0, 6);
+        new Input(Main.currentConnectorID, this, 0, getHeight() - 6);
+        new Output(Main.currentConnectorID, this, getWidth(), getHeight() / 2);
 
     }
+    /**
+     * Este metodo establece la logica de la compuerta para obtener un salida
+     * de acuerdo a su respectiva logica
+     * */
     public boolean operation(Lista<Boolean> args) {
         boolean entrada1 = args.get(0);
         boolean entrada2 = args.get(1);

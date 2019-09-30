@@ -18,28 +18,55 @@ public class Plantilla extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) { // Haciendo click en la plantilla o screen se hacen diferentes cosas dependiendo del modo
                 super.mouseClicked(e);
-                if (Main.modo.equals("addingAnd")) {
-                    Componente c = new Factory().ComponentFactory(TypeComponent.AND, e);
-                } else if (Main.modo.equals("addingOr")) {
-                    Componente c = new Factory().ComponentFactory(TypeComponent.OR, e);
-                } else if (Main.modo.equals("addingNot")) {
-                    Componente c= new Factory().ComponentFactory(TypeComponent.NOT,e);
-                } else if (Main.modo.equals("addingNand")) {
-                    Componente c= new Factory().ComponentFactory(TypeComponent.NAND,e);
-                } else if (Main.modo.equals("addingNor")) {
-                    Componente c= new Factory().ComponentFactory(TypeComponent.NOR,e);
-                } else if (Main.modo.equals("addingXor")) {
-                    Componente c= new Factory().ComponentFactory(TypeComponent.XOR,e);;
-                } else if (Main.modo.equals("addingXnor")) {
-                    Componente c= new Factory().ComponentFactory(TypeComponent.XNOR,e);
+                switch (Main.mode) {
+                    case "addingAnd": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.AND, e);
+                        break;
+                    }
+                    case "addingOr": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.OR, e);
+                        break;
+                    }
+                    case "addingNot": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.NOT, e);
+                        break;
+                    }
+                    case "addingNand": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.NAND, e);
+                        break;
+                    }
+                    case "addingNor": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.NOR, e);
+                        break;
+                    }
+                    case "addingXor": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.XOR, e);
+                        ;
+                        break;
+                    }
+                    case "addingXnor": {
+                        new Factory();
+                        Component c = Factory.ComponentFactory(TypeComponent.XNOR, e);
 
-                } else if (Main.modo.equals("addingStart")) {
-                    Componente c = new PuntoInicio(Main.IDComponente, e.getX(), e.getY());
+                        break;
+                    }
+                    case "addingStart": {
+                        Component c = new PuntoInicio(Main.currentComponentID, e.getX(), e.getY());
 
-                } else if (Main.modo.equals("addingEnd")) {
-                    Componente c = new PuntoFinal(Main.IDComponente, e.getX(), e.getY());
+                        break;
+                    }
+                    case "addingEnd": {
+                        Component c = new PuntoFinal(Main.currentComponentID, e.getX(), e.getY());
+                        break;
+                    }
                 }
-                Main.modo = "";
+                Main.mode = "";
                 Main.drawPanel.repaint();
 
             }
@@ -53,8 +80,8 @@ public class Plantilla extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        System.out.println(Main.lineas.size());
-        for (Conexion line: Main.lineas){
+        System.out.println(Main.lines.size());
+        for (Connection line: Main.lines){
             line.paintConnection(g2d);
         }
 

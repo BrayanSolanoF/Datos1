@@ -10,48 +10,48 @@ import java.awt.Shape;
  * Las entradas y salidas son los cuadrados rojos y azules en las compuertas
  * */
 
-public class Conector {
+abstract class Connector {
     boolean value;
     boolean hasValue = false;
     boolean isInput;
     boolean isOutput;
     int id;
-    Componente componente;
-    Lista<Conexion> conexiones = new Lista<Conexion>();
-    int ConexionesMaximas;
+    Component component;
+    Lista<Connection> connections = new Lista<Connection>();
+    int maxConnections;
 
     int x, y;
     int w = 10, h = 10;
     Shape shape;
     Color color;
-    Conector(int ID, Componente c, int x, int y) {
+    Connector(int ID, Component c, int x, int y) {
 
         id = ID;
-        Main.IDComponente++;
+        Main.currentComponentID++;
 
-        this.componente = c;
+        this.component = c;
         this.x = x;
         this.y = y;
     }
     boolean isAvailable() {
-        if (componente.type.equals("Start") && this.isInput) {
+        if (component.type.equals("Start") && this.isInput) {
 
             return false;
         }
         else {
-            return (conexiones.size() < ConexionesMaximas);
+            return (connections.size() < maxConnections);
         }
 
     }
-    void addConnection(Conexion con) {
-        if (isAvailable()) conexiones.add(con);
+    void addConnection(Connection con) {
+        if (isAvailable()) connections.add(con);
     }
     public int getX() {
-        return componente.getX() + x;
+        return component.getX() + x;
 
     }
     public int getY() {
-        return componente.getY() + y;
+        return component.getY() + y;
     }
     public boolean contains(Point p) { //used to see if a mouse click is on the Connector (input or output)
         return shape.contains(p);
@@ -60,7 +60,7 @@ public class Conector {
         if (isAvailable()) {
             g2d.setColor(color);
         }
-        else if (componente.type.equals("Start")) {
+        else if (component.type.equals("Start")) {
             g2d.setColor(Color.pink);
 
         }

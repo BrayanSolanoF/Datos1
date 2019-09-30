@@ -4,15 +4,15 @@ import java.awt.*;
  * Clase input (entrada)
  * Esta clase es un tipo de conector
  * */
-public class Entrada extends Conector {
-    public Entrada(int ID, Componente owner, int x, int y) {
+public class Input extends Connector {
+    public Input(int ID, Component owner, int x, int y) {
         super(ID,owner, x, y);
         isInput = true;
         owner.addInput(this);
         if (owner.type.equals("Start")) {
             owner.addtoToggles(this);
         }
-        ConexionesMaximas = 1;
+        maxConnections = 1;
 
 
         Polygon p = new Polygon();

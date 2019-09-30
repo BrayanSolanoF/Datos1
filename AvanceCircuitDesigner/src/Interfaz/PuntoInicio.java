@@ -11,7 +11,7 @@ import javax.swing.border.LineBorder;
  * Los puntos de inicio son los unicos componentes con un valor default
  * Otros componentes solo almacenan valores en sus entradas o salidas
  * */
-public class PuntoInicio extends  Componente {
+public class PuntoInicio extends Component {
 
     PuntoInicio(int ID, int x, int y) {
         super(ID, "Start", x, y);
@@ -24,12 +24,12 @@ public class PuntoInicio extends  Componente {
         setBounds(x, y, 70, 30);
         setBorder(new LineBorder(Color.black, 1));
 
-        Salida bye = new Salida(Main.IDConector, this, getWidth(), getHeight() /2);
-        Entrada hi = new Entrada(Main.IDConector, this, 0, getHeight() /2);
+        Output bye = new Output(Main.currentConnectorID, this, getWidth(), getHeight() /2);
+        Input hi = new Input(Main.currentConnectorID, this, 0, getHeight() /2);
         hi.hasValue = true;
 
 
-        hi.ConexionesMaximas = 0;
+        hi.maxConnections = 0;
 
 
     }
@@ -39,7 +39,7 @@ public class PuntoInicio extends  Componente {
     }
     public boolean operation(Lista<Boolean> args) {
 
-        return salidas.get(0).value;
+        return outputs.get(0).value;
     }
     /**
      * Este metodo se encarga de pasar o hacer un "switch" en los valores del puntoInicial
@@ -49,10 +49,10 @@ public class PuntoInicio extends  Componente {
         value +=1;
         value %= 2;
         if (value == 0) {
-            salidas.get(0).value = false;
+            outputs.get(0).value = false;
         }
         else {
-            salidas.get(0).value = true;
+            outputs.get(0).value = true;
         }
 
 
