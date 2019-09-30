@@ -4,16 +4,19 @@ import java.util.Iterator;
 
 
 /**
- * Esta es mi clase es una Lista, la cual es una lista Generica para manejra diferentes tipos de datos
+ * Esta es mi clase es una Lista, la cual es una lista Generica para maneja diferentes tipos de datos
  *
  * */
-//Se inicia el proyecto con ArrayLists entonces
+//Se inicia el proyecto con ArrayLists entonces se debe usar un iterator para poder mantener los ciclos for each al conbertir los
+// en una lista propia
 public class Lista <T> implements Iterable<T>{
     @Override
     public Iterator<T> iterator() {
         return new CustomIterator<T>(this);
     }
-
+/**
+ * Metodo para agregar a mi lista
+ * */
     public void add(T value){
         Nodo<T> nodo = new Nodo<>(value);
         if (cabeza == null)
@@ -23,7 +26,9 @@ public class Lista <T> implements Iterable<T>{
             cola = nodo;
         }
     }
-
+/**
+ * Metodo para remover de mi lista
+ * */
     public void remove(T connections){
         throw new UnsupportedOperationException();
 

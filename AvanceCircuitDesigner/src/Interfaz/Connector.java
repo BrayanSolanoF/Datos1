@@ -6,15 +6,15 @@ import java.awt.Point;
 import java.awt.Shape;
 
 /**
- * La clase Connector es una clase general para las entradas y salidas
+ * La clase Conector es una clase general para las entradas y salidas
  * Las entradas y salidas son los cuadrados rojos y azules en las compuertas
  * */
 
 public class Connector {
-    boolean value;
-    boolean hasValue = false;
-    boolean isInput;
-    boolean isOutput;
+    boolean value; //Entrada y salida tienen valores, no compuertas
+    boolean hasValue = false;//No tiene un valor hasta que se le da uno
+    boolean isInput;//Son usados booleanos en vez de strings
+    boolean isOutput;//Son usados booleanos en vez de strings
     int id;
     Component component;
     Lista<Connection> connections = new Lista<Connection>();
@@ -22,7 +22,7 @@ public class Connector {
 
     int x, y;
     int w = 10, h = 10;
-    Shape shape;
+    Shape shape;//Define la forma de como los conectores aparecen
     Color color;
     Connector(int ID, Component c, int x, int y) {
 
@@ -38,7 +38,7 @@ public class Connector {
 
             return false;
         }
-        else {
+        else {//Se asegura que el numero de conexiones es menor que la cantidad maxima posible
             return (connections.size() < maxConnections);
         }
 
@@ -56,11 +56,11 @@ public class Connector {
     public boolean contains(Point p) { //used to see if a mouse click is on the Connector (input or output)
         return shape.contains(p);
     }
-    public void paintConnector(Graphics2D g2d) {
+    public void paintConnector(Graphics2D g2d) {//Dibuja el conector
         if (isAvailable()) {
             g2d.setColor(color);
         }
-        else if (component.type.equals("Start")) {
+        else if (component.type.equals("Start")) {//Cambia el color al momento de conectar un a entrada a color rosa
             g2d.setColor(Color.pink);
 
         }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connection.java" afterDir="false" />
+    <list default="true" id="f01198d2-3a10-4d5c-b974-eb68ac5ceff4" name="Default Changelist" comment="Se agrega documentacion en clase Conexion">
       <change beforePath="$PROJECT_DIR$/src/Interfaz/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Connector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaz/Lista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Lista.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <workItem from="1568789786036" duration="29175000" />
       <workItem from="1569399892021" duration="8025000" />
       <workItem from="1569457323743" duration="15000" />
-      <workItem from="1569470498052" duration="53743000" />
+      <workItem from="1569470498052" duration="54567000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregan botones 2.0">
       <created>1568667693975</created>
@@ -268,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569804367623</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Se agrega documentacion en clase Componente">
+      <created>1569808081540</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1569808081540</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +316,7 @@
     <MESSAGE value="Se agregan comentarios y javaDocs a la clase componente" />
     <MESSAGE value="Se editan JavaDocs de cada clase" />
     <MESSAGE value="Se corrigue error al cargar imagenes en paleta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se corrigue error al cargar imagenes en paleta" />
+    <MESSAGE value="Se agrega documentacion en clase Componente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega documentacion en clase Componente" />
   </component>
 </project>
