@@ -1,7 +1,9 @@
 package Interfaz;
+
 /**
  * Clase relacionada al patron de diseño Factory
  * */
+
 public enum TypeComponent {
     AND,
     NAND,
@@ -9,7 +11,5 @@ public enum TypeComponent {
     OR,
     XOR,
     XNOR,
-    NOR
-
-
+    NOR,
 }

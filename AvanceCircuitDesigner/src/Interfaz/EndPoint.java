@@ -9,8 +9,8 @@ import javax.swing.border.LineBorder;
  * Clase Punto final
  * Esta clase almacena el resultado al evaluar las entradas en su respectiva compuerta
  * */
-public class PuntoFinal extends Component {
-    PuntoFinal(int ID, int x, int y) {
+public class EndPoint extends Component {
+    EndPoint(int ID, int x, int y) {
         super(ID, "End", x, y);
         type = "End";
 
